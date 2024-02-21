@@ -1,0 +1,5258 @@
+[
+  {
+    "range": {
+      "low": 0,
+      "high": 47.99,
+      "interval": 48
+    },
+    "gis": 583.2,
+    "combinedOasGis": 1231.87
+  },
+  {
+    "range": {
+      "low": 48,
+      "high": 95.99,
+      "interval": 48
+    },
+    "gis": 582.2,
+    "combinedOasGis": 1230.87
+  },
+  {
+    "range": {
+      "low": 96,
+      "high": 143.99,
+      "interval": 48
+    },
+    "gis": 581.2,
+    "combinedOasGis": 1229.87
+  },
+  {
+    "range": {
+      "low": 144,
+      "high": 191.99,
+      "interval": 48
+    },
+    "gis": 580.2,
+    "combinedOasGis": 1228.87
+  },
+  {
+    "range": {
+      "low": 192,
+      "high": 239.99,
+      "interval": 48
+    },
+    "gis": 579.2,
+    "combinedOasGis": 1227.87
+  },
+  {
+    "range": {
+      "low": 240,
+      "high": 287.99,
+      "interval": 48
+    },
+    "gis": 578.2,
+    "combinedOasGis": 1226.87
+  },
+  {
+    "range": {
+      "low": 288,
+      "high": 335.99,
+      "interval": 48
+    },
+    "gis": 577.2,
+    "combinedOasGis": 1225.87
+  },
+  {
+    "range": {
+      "low": 336,
+      "high": 383.99,
+      "interval": 48
+    },
+    "gis": 576.2,
+    "combinedOasGis": 1224.87
+  },
+  {
+    "range": {
+      "low": 384,
+      "high": 431.99,
+      "interval": 48
+    },
+    "gis": 575.2,
+    "combinedOasGis": 1223.87
+  },
+  {
+    "range": {
+      "low": 432,
+      "high": 479.99,
+      "interval": 48
+    },
+    "gis": 574.2,
+    "combinedOasGis": 1222.87
+  },
+  {
+    "range": {
+      "low": 480,
+      "high": 527.99,
+      "interval": 48
+    },
+    "gis": 573.2,
+    "combinedOasGis": 1221.87
+  },
+  {
+    "range": {
+      "low": 528,
+      "high": 575.99,
+      "interval": 48
+    },
+    "gis": 572.2,
+    "combinedOasGis": 1220.87
+  },
+  {
+    "range": {
+      "low": 576,
+      "high": 623.99,
+      "interval": 48
+    },
+    "gis": 571.2,
+    "combinedOasGis": 1219.87
+  },
+  {
+    "range": {
+      "low": 624,
+      "high": 671.99,
+      "interval": 48
+    },
+    "gis": 570.2,
+    "combinedOasGis": 1218.87
+  },
+  {
+    "range": {
+      "low": 672,
+      "high": 719.99,
+      "interval": 48
+    },
+    "gis": 569.2,
+    "combinedOasGis": 1217.87
+  },
+  {
+    "range": {
+      "low": 720,
+      "high": 767.99,
+      "interval": 48
+    },
+    "gis": 568.2,
+    "combinedOasGis": 1216.87
+  },
+  {
+    "range": {
+      "low": 768,
+      "high": 815.99,
+      "interval": 48
+    },
+    "gis": 567.2,
+    "combinedOasGis": 1215.87
+  },
+  {
+    "range": {
+      "low": 816,
+      "high": 863.99,
+      "interval": 48
+    },
+    "gis": 566.2,
+    "combinedOasGis": 1214.87
+  },
+  {
+    "range": {
+      "low": 864,
+      "high": 911.99,
+      "interval": 48
+    },
+    "gis": 565.2,
+    "combinedOasGis": 1213.87
+  },
+  {
+    "range": {
+      "low": 912,
+      "high": 959.99,
+      "interval": 48
+    },
+    "gis": 564.2,
+    "combinedOasGis": 1212.87
+  },
+  {
+    "range": {
+      "low": 960,
+      "high": 1007.99,
+      "interval": 48
+    },
+    "gis": 563.2,
+    "combinedOasGis": 1211.87
+  },
+  {
+    "range": {
+      "low": 1008,
+      "high": 1055.99,
+      "interval": 48
+    },
+    "gis": 562.2,
+    "combinedOasGis": 1210.87
+  },
+  {
+    "range": {
+      "low": 1056,
+      "high": 1103.99,
+      "interval": 48
+    },
+    "gis": 561.2,
+    "combinedOasGis": 1209.87
+  },
+  {
+    "range": {
+      "low": 1104,
+      "high": 1151.99,
+      "interval": 48
+    },
+    "gis": 560.2,
+    "combinedOasGis": 1208.87
+  },
+  {
+    "range": {
+      "low": 1152,
+      "high": 1199.99,
+      "interval": 48
+    },
+    "gis": 559.2,
+    "combinedOasGis": 1207.87
+  },
+  {
+    "range": {
+      "low": 1200,
+      "high": 1247.99,
+      "interval": 48
+    },
+    "gis": 558.2,
+    "combinedOasGis": 1206.87
+  },
+  {
+    "range": {
+      "low": 1248,
+      "high": 1295.99,
+      "interval": 48
+    },
+    "gis": 557.2,
+    "combinedOasGis": 1205.87
+  },
+  {
+    "range": {
+      "low": 1296,
+      "high": 1343.99,
+      "interval": 48
+    },
+    "gis": 556.2,
+    "combinedOasGis": 1204.87
+  },
+  {
+    "range": {
+      "low": 1344,
+      "high": 1391.99,
+      "interval": 48
+    },
+    "gis": 555.2,
+    "combinedOasGis": 1203.87
+  },
+  {
+    "range": {
+      "low": 1392,
+      "high": 1439.99,
+      "interval": 48
+    },
+    "gis": 554.2,
+    "combinedOasGis": 1202.87
+  },
+  {
+    "range": {
+      "low": 1440,
+      "high": 1487.99,
+      "interval": 48
+    },
+    "gis": 553.2,
+    "combinedOasGis": 1201.87
+  },
+  {
+    "range": {
+      "low": 1488,
+      "high": 1535.99,
+      "interval": 48
+    },
+    "gis": 552.2,
+    "combinedOasGis": 1200.87
+  },
+  {
+    "range": {
+      "low": 1536,
+      "high": 1583.99,
+      "interval": 48
+    },
+    "gis": 551.2,
+    "combinedOasGis": 1199.87
+  },
+  {
+    "range": {
+      "low": 1584,
+      "high": 1631.99,
+      "interval": 48
+    },
+    "gis": 550.2,
+    "combinedOasGis": 1198.87
+  },
+  {
+    "range": {
+      "low": 1632,
+      "high": 1679.99,
+      "interval": 48
+    },
+    "gis": 549.2,
+    "combinedOasGis": 1197.87
+  },
+  {
+    "range": {
+      "low": 1680,
+      "high": 1727.99,
+      "interval": 48
+    },
+    "gis": 548.2,
+    "combinedOasGis": 1196.87
+  },
+  {
+    "range": {
+      "low": 1728,
+      "high": 1775.99,
+      "interval": 48
+    },
+    "gis": 547.2,
+    "combinedOasGis": 1195.87
+  },
+  {
+    "range": {
+      "low": 1776,
+      "high": 1823.99,
+      "interval": 48
+    },
+    "gis": 546.2,
+    "combinedOasGis": 1194.87
+  },
+  {
+    "range": {
+      "low": 1824,
+      "high": 1871.99,
+      "interval": 48
+    },
+    "gis": 545.2,
+    "combinedOasGis": 1193.87
+  },
+  {
+    "range": {
+      "low": 1872,
+      "high": 1919.99,
+      "interval": 48
+    },
+    "gis": 544.2,
+    "combinedOasGis": 1192.87
+  },
+  {
+    "range": {
+      "low": 1920,
+      "high": 1967.99,
+      "interval": 48
+    },
+    "gis": 543.2,
+    "combinedOasGis": 1191.87
+  },
+  {
+    "range": {
+      "low": 1968,
+      "high": 2015.99,
+      "interval": 48
+    },
+    "gis": 542.2,
+    "combinedOasGis": 1190.87
+  },
+  {
+    "range": {
+      "low": 2016,
+      "high": 2063.99,
+      "interval": 48
+    },
+    "gis": 541.2,
+    "combinedOasGis": 1189.87
+  },
+  {
+    "range": {
+      "low": 2064,
+      "high": 2111.99,
+      "interval": 48
+    },
+    "gis": 540.2,
+    "combinedOasGis": 1188.87
+  },
+  {
+    "range": {
+      "low": 2112,
+      "high": 2159.99,
+      "interval": 48
+    },
+    "gis": 539.2,
+    "combinedOasGis": 1187.87
+  },
+  {
+    "range": {
+      "low": 2160,
+      "high": 2207.99,
+      "interval": 48
+    },
+    "gis": 538.2,
+    "combinedOasGis": 1186.87
+  },
+  {
+    "range": {
+      "low": 2208,
+      "high": 2255.99,
+      "interval": 48
+    },
+    "gis": 537.2,
+    "combinedOasGis": 1185.87
+  },
+  {
+    "range": {
+      "low": 2256,
+      "high": 2303.99,
+      "interval": 48
+    },
+    "gis": 536.2,
+    "combinedOasGis": 1184.87
+  },
+  {
+    "range": {
+      "low": 2304,
+      "high": 2351.99,
+      "interval": 48
+    },
+    "gis": 535.2,
+    "combinedOasGis": 1183.87
+  },
+  {
+    "range": {
+      "low": 2352,
+      "high": 2399.99,
+      "interval": 48
+    },
+    "gis": 534.2,
+    "combinedOasGis": 1182.87
+  },
+  {
+    "range": {
+      "low": 2400,
+      "high": 2447.99,
+      "interval": 48
+    },
+    "gis": 533.2,
+    "combinedOasGis": 1181.87
+  },
+  {
+    "range": {
+      "low": 2448,
+      "high": 2495.99,
+      "interval": 48
+    },
+    "gis": 532.2,
+    "combinedOasGis": 1180.87
+  },
+  {
+    "range": {
+      "low": 2496,
+      "high": 2543.99,
+      "interval": 48
+    },
+    "gis": 531.2,
+    "combinedOasGis": 1179.87
+  },
+  {
+    "range": {
+      "low": 2544,
+      "high": 2591.99,
+      "interval": 48
+    },
+    "gis": 530.2,
+    "combinedOasGis": 1178.87
+  },
+  {
+    "range": {
+      "low": 2592,
+      "high": 2639.99,
+      "interval": 48
+    },
+    "gis": 529.2,
+    "combinedOasGis": 1177.87
+  },
+  {
+    "range": {
+      "low": 2640,
+      "high": 2687.99,
+      "interval": 48
+    },
+    "gis": 528.2,
+    "combinedOasGis": 1176.87
+  },
+  {
+    "range": {
+      "low": 2688,
+      "high": 2735.99,
+      "interval": 48
+    },
+    "gis": 527.2,
+    "combinedOasGis": 1175.87
+  },
+  {
+    "range": {
+      "low": 2736,
+      "high": 2783.99,
+      "interval": 48
+    },
+    "gis": 526.2,
+    "combinedOasGis": 1174.87
+  },
+  {
+    "range": {
+      "low": 2784,
+      "high": 2831.99,
+      "interval": 48
+    },
+    "gis": 525.2,
+    "combinedOasGis": 1173.87
+  },
+  {
+    "range": {
+      "low": 2832,
+      "high": 2879.99,
+      "interval": 48
+    },
+    "gis": 524.2,
+    "combinedOasGis": 1172.87
+  },
+  {
+    "range": {
+      "low": 2880,
+      "high": 2927.99,
+      "interval": 48
+    },
+    "gis": 523.2,
+    "combinedOasGis": 1171.87
+  },
+  {
+    "range": {
+      "low": 2928,
+      "high": 2975.99,
+      "interval": 48
+    },
+    "gis": 522.2,
+    "combinedOasGis": 1170.87
+  },
+  {
+    "range": {
+      "low": 2976,
+      "high": 3023.99,
+      "interval": 48
+    },
+    "gis": 521.2,
+    "combinedOasGis": 1169.87
+  },
+  {
+    "range": {
+      "low": 3024,
+      "high": 3071.99,
+      "interval": 48
+    },
+    "gis": 520.2,
+    "combinedOasGis": 1168.87
+  },
+  {
+    "range": {
+      "low": 3072,
+      "high": 3119.99,
+      "interval": 48
+    },
+    "gis": 519.2,
+    "combinedOasGis": 1167.87
+  },
+  {
+    "range": {
+      "low": 3120,
+      "high": 3167.99,
+      "interval": 48
+    },
+    "gis": 518.2,
+    "combinedOasGis": 1166.87
+  },
+  {
+    "range": {
+      "low": 3168,
+      "high": 3215.99,
+      "interval": 48
+    },
+    "gis": 517.2,
+    "combinedOasGis": 1165.87
+  },
+  {
+    "range": {
+      "low": 3216,
+      "high": 3263.99,
+      "interval": 48
+    },
+    "gis": 516.2,
+    "combinedOasGis": 1164.87
+  },
+  {
+    "range": {
+      "low": 3264,
+      "high": 3311.99,
+      "interval": 48
+    },
+    "gis": 515.2,
+    "combinedOasGis": 1163.87
+  },
+  {
+    "range": {
+      "low": 3312,
+      "high": 3359.99,
+      "interval": 48
+    },
+    "gis": 514.2,
+    "combinedOasGis": 1162.87
+  },
+  {
+    "range": {
+      "low": 3360,
+      "high": 3407.99,
+      "interval": 48
+    },
+    "gis": 513.2,
+    "combinedOasGis": 1161.87
+  },
+  {
+    "range": {
+      "low": 3408,
+      "high": 3455.99,
+      "interval": 48
+    },
+    "gis": 512.2,
+    "combinedOasGis": 1160.87
+  },
+  {
+    "range": {
+      "low": 3456,
+      "high": 3503.99,
+      "interval": 48
+    },
+    "gis": 511.2,
+    "combinedOasGis": 1159.87
+  },
+  {
+    "range": {
+      "low": 3504,
+      "high": 3551.99,
+      "interval": 48
+    },
+    "gis": 510.2,
+    "combinedOasGis": 1158.87
+  },
+  {
+    "range": {
+      "low": 3552,
+      "high": 3599.99,
+      "interval": 48
+    },
+    "gis": 509.2,
+    "combinedOasGis": 1157.87
+  },
+  {
+    "range": {
+      "low": 3600,
+      "high": 3647.99,
+      "interval": 48
+    },
+    "gis": 508.2,
+    "combinedOasGis": 1156.87
+  },
+  {
+    "range": {
+      "low": 3648,
+      "high": 3695.99,
+      "interval": 48
+    },
+    "gis": 507.2,
+    "combinedOasGis": 1155.87
+  },
+  {
+    "range": {
+      "low": 3696,
+      "high": 3743.99,
+      "interval": 48
+    },
+    "gis": 506.2,
+    "combinedOasGis": 1154.87
+  },
+  {
+    "range": {
+      "low": 3744,
+      "high": 3791.99,
+      "interval": 48
+    },
+    "gis": 505.2,
+    "combinedOasGis": 1153.87
+  },
+  {
+    "range": {
+      "low": 3792,
+      "high": 3839.99,
+      "interval": 48
+    },
+    "gis": 504.2,
+    "combinedOasGis": 1152.87
+  },
+  {
+    "range": {
+      "low": 3840,
+      "high": 3887.99,
+      "interval": 48
+    },
+    "gis": 503.2,
+    "combinedOasGis": 1151.87
+  },
+  {
+    "range": {
+      "low": 3888,
+      "high": 3935.99,
+      "interval": 48
+    },
+    "gis": 502.2,
+    "combinedOasGis": 1150.87
+  },
+  {
+    "range": {
+      "low": 3936,
+      "high": 3983.99,
+      "interval": 48
+    },
+    "gis": 501.2,
+    "combinedOasGis": 1149.87
+  },
+  {
+    "range": {
+      "low": 3984,
+      "high": 4031.99,
+      "interval": 48
+    },
+    "gis": 500.2,
+    "combinedOasGis": 1148.87
+  },
+  {
+    "range": {
+      "low": 4032,
+      "high": 4079.99,
+      "interval": 48
+    },
+    "gis": 499.2,
+    "combinedOasGis": 1147.87
+  },
+  {
+    "range": {
+      "low": 4080,
+      "high": 4095.99,
+      "interval": 16
+    },
+    "gis": 498.2,
+    "combinedOasGis": 1146.87
+  },
+  {
+    "range": {
+      "low": 4096,
+      "high": 4127.99,
+      "interval": 32
+    },
+    "gis": 497.2,
+    "combinedOasGis": 1145.87
+  },
+  {
+    "range": {
+      "low": 4128,
+      "high": 4175.99,
+      "interval": 48
+    },
+    "gis": 496.2,
+    "combinedOasGis": 1144.87
+  },
+  {
+    "range": {
+      "low": 4176,
+      "high": 4191.99,
+      "interval": 16
+    },
+    "gis": 495.2,
+    "combinedOasGis": 1143.87
+  },
+  {
+    "range": {
+      "low": 4192,
+      "high": 4223.99,
+      "interval": 32
+    },
+    "gis": 494.2,
+    "combinedOasGis": 1142.87
+  },
+  {
+    "range": {
+      "low": 4224,
+      "high": 4271.99,
+      "interval": 48
+    },
+    "gis": 493.2,
+    "combinedOasGis": 1141.87
+  },
+  {
+    "range": {
+      "low": 4272,
+      "high": 4287.99,
+      "interval": 16
+    },
+    "gis": 492.2,
+    "combinedOasGis": 1140.87
+  },
+  {
+    "range": {
+      "low": 4288,
+      "high": 4319.99,
+      "interval": 32
+    },
+    "gis": 491.2,
+    "combinedOasGis": 1139.87
+  },
+  {
+    "range": {
+      "low": 4320,
+      "high": 4367.99,
+      "interval": 48
+    },
+    "gis": 490.2,
+    "combinedOasGis": 1138.87
+  },
+  {
+    "range": {
+      "low": 4368,
+      "high": 4383.99,
+      "interval": 16
+    },
+    "gis": 489.2,
+    "combinedOasGis": 1137.87
+  },
+  {
+    "range": {
+      "low": 4384,
+      "high": 4415.99,
+      "interval": 32
+    },
+    "gis": 488.2,
+    "combinedOasGis": 1136.87
+  },
+  {
+    "range": {
+      "low": 4416,
+      "high": 4463.99,
+      "interval": 48
+    },
+    "gis": 487.2,
+    "combinedOasGis": 1135.87
+  },
+  {
+    "range": {
+      "low": 4464,
+      "high": 4479.99,
+      "interval": 16
+    },
+    "gis": 486.2,
+    "combinedOasGis": 1134.87
+  },
+  {
+    "range": {
+      "low": 4480,
+      "high": 4511.99,
+      "interval": 32
+    },
+    "gis": 485.2,
+    "combinedOasGis": 1133.87
+  },
+  {
+    "range": {
+      "low": 4512,
+      "high": 4559.99,
+      "interval": 48
+    },
+    "gis": 484.2,
+    "combinedOasGis": 1132.87
+  },
+  {
+    "range": {
+      "low": 4560,
+      "high": 4575.99,
+      "interval": 16
+    },
+    "gis": 483.2,
+    "combinedOasGis": 1131.87
+  },
+  {
+    "range": {
+      "low": 4576,
+      "high": 4607.99,
+      "interval": 32
+    },
+    "gis": 482.2,
+    "combinedOasGis": 1130.87
+  },
+  {
+    "range": {
+      "low": 4608,
+      "high": 4655.99,
+      "interval": 48
+    },
+    "gis": 481.2,
+    "combinedOasGis": 1129.87
+  },
+  {
+    "range": {
+      "low": 4656,
+      "high": 4671.99,
+      "interval": 16
+    },
+    "gis": 480.2,
+    "combinedOasGis": 1128.87
+  },
+  {
+    "range": {
+      "low": 4672,
+      "high": 4703.99,
+      "interval": 32
+    },
+    "gis": 479.2,
+    "combinedOasGis": 1127.87
+  },
+  {
+    "range": {
+      "low": 4704,
+      "high": 4751.99,
+      "interval": 48
+    },
+    "gis": 478.2,
+    "combinedOasGis": 1126.87
+  },
+  {
+    "range": {
+      "low": 4752,
+      "high": 4767.99,
+      "interval": 16
+    },
+    "gis": 477.2,
+    "combinedOasGis": 1125.87
+  },
+  {
+    "range": {
+      "low": 4768,
+      "high": 4799.99,
+      "interval": 32
+    },
+    "gis": 476.2,
+    "combinedOasGis": 1124.87
+  },
+  {
+    "range": {
+      "low": 4800,
+      "high": 4847.99,
+      "interval": 48
+    },
+    "gis": 475.2,
+    "combinedOasGis": 1123.87
+  },
+  {
+    "range": {
+      "low": 4848,
+      "high": 4863.99,
+      "interval": 16
+    },
+    "gis": 474.2,
+    "combinedOasGis": 1122.87
+  },
+  {
+    "range": {
+      "low": 4864,
+      "high": 4895.99,
+      "interval": 32
+    },
+    "gis": 473.2,
+    "combinedOasGis": 1121.87
+  },
+  {
+    "range": {
+      "low": 4896,
+      "high": 4943.99,
+      "interval": 48
+    },
+    "gis": 472.2,
+    "combinedOasGis": 1120.87
+  },
+  {
+    "range": {
+      "low": 4944,
+      "high": 4959.99,
+      "interval": 16
+    },
+    "gis": 471.2,
+    "combinedOasGis": 1119.87
+  },
+  {
+    "range": {
+      "low": 4960,
+      "high": 4991.99,
+      "interval": 32
+    },
+    "gis": 470.2,
+    "combinedOasGis": 1118.87
+  },
+  {
+    "range": {
+      "low": 4992,
+      "high": 5039.99,
+      "interval": 48
+    },
+    "gis": 469.2,
+    "combinedOasGis": 1117.87
+  },
+  {
+    "range": {
+      "low": 5040,
+      "high": 5055.99,
+      "interval": 16
+    },
+    "gis": 468.2,
+    "combinedOasGis": 1116.87
+  },
+  {
+    "range": {
+      "low": 5056,
+      "high": 5087.99,
+      "interval": 32
+    },
+    "gis": 467.2,
+    "combinedOasGis": 1115.87
+  },
+  {
+    "range": {
+      "low": 5088,
+      "high": 5135.99,
+      "interval": 48
+    },
+    "gis": 466.2,
+    "combinedOasGis": 1114.87
+  },
+  {
+    "range": {
+      "low": 5136,
+      "high": 5151.99,
+      "interval": 16
+    },
+    "gis": 465.2,
+    "combinedOasGis": 1113.87
+  },
+  {
+    "range": {
+      "low": 5152,
+      "high": 5183.99,
+      "interval": 32
+    },
+    "gis": 464.2,
+    "combinedOasGis": 1112.87
+  },
+  {
+    "range": {
+      "low": 5184,
+      "high": 5231.99,
+      "interval": 48
+    },
+    "gis": 463.2,
+    "combinedOasGis": 1111.87
+  },
+  {
+    "range": {
+      "low": 5232,
+      "high": 5247.99,
+      "interval": 16
+    },
+    "gis": 462.2,
+    "combinedOasGis": 1110.87
+  },
+  {
+    "range": {
+      "low": 5248,
+      "high": 5279.99,
+      "interval": 32
+    },
+    "gis": 461.2,
+    "combinedOasGis": 1109.87
+  },
+  {
+    "range": {
+      "low": 5280,
+      "high": 5327.99,
+      "interval": 48
+    },
+    "gis": 460.2,
+    "combinedOasGis": 1108.87
+  },
+  {
+    "range": {
+      "low": 5328,
+      "high": 5343.99,
+      "interval": 16
+    },
+    "gis": 459.2,
+    "combinedOasGis": 1107.87
+  },
+  {
+    "range": {
+      "low": 5344,
+      "high": 5375.99,
+      "interval": 32
+    },
+    "gis": 458.2,
+    "combinedOasGis": 1106.87
+  },
+  {
+    "range": {
+      "low": 5376,
+      "high": 5423.99,
+      "interval": 48
+    },
+    "gis": 457.2,
+    "combinedOasGis": 1105.87
+  },
+  {
+    "range": {
+      "low": 5424,
+      "high": 5439.99,
+      "interval": 16
+    },
+    "gis": 456.2,
+    "combinedOasGis": 1104.87
+  },
+  {
+    "range": {
+      "low": 5440,
+      "high": 5471.99,
+      "interval": 32
+    },
+    "gis": 455.2,
+    "combinedOasGis": 1103.87
+  },
+  {
+    "range": {
+      "low": 5472,
+      "high": 5519.99,
+      "interval": 48
+    },
+    "gis": 454.2,
+    "combinedOasGis": 1102.87
+  },
+  {
+    "range": {
+      "low": 5520,
+      "high": 5535.99,
+      "interval": 16
+    },
+    "gis": 453.2,
+    "combinedOasGis": 1101.87
+  },
+  {
+    "range": {
+      "low": 5536,
+      "high": 5567.99,
+      "interval": 32
+    },
+    "gis": 452.2,
+    "combinedOasGis": 1100.87
+  },
+  {
+    "range": {
+      "low": 5568,
+      "high": 5615.99,
+      "interval": 48
+    },
+    "gis": 451.2,
+    "combinedOasGis": 1099.87
+  },
+  {
+    "range": {
+      "low": 5616,
+      "high": 5631.99,
+      "interval": 16
+    },
+    "gis": 450.2,
+    "combinedOasGis": 1098.87
+  },
+  {
+    "range": {
+      "low": 5632,
+      "high": 5663.99,
+      "interval": 32
+    },
+    "gis": 449.2,
+    "combinedOasGis": 1097.87
+  },
+  {
+    "range": {
+      "low": 5664,
+      "high": 5711.99,
+      "interval": 48
+    },
+    "gis": 448.2,
+    "combinedOasGis": 1096.87
+  },
+  {
+    "range": {
+      "low": 5712,
+      "high": 5727.99,
+      "interval": 16
+    },
+    "gis": 447.2,
+    "combinedOasGis": 1095.87
+  },
+  {
+    "range": {
+      "low": 5728,
+      "high": 5759.99,
+      "interval": 32
+    },
+    "gis": 446.2,
+    "combinedOasGis": 1094.87
+  },
+  {
+    "range": {
+      "low": 5760,
+      "high": 5807.99,
+      "interval": 48
+    },
+    "gis": 445.2,
+    "combinedOasGis": 1093.87
+  },
+  {
+    "range": {
+      "low": 5808,
+      "high": 5823.99,
+      "interval": 16
+    },
+    "gis": 444.2,
+    "combinedOasGis": 1092.87
+  },
+  {
+    "range": {
+      "low": 5824,
+      "high": 5855.99,
+      "interval": 32
+    },
+    "gis": 443.2,
+    "combinedOasGis": 1091.87
+  },
+  {
+    "range": {
+      "low": 5856,
+      "high": 5903.99,
+      "interval": 48
+    },
+    "gis": 442.2,
+    "combinedOasGis": 1090.87
+  },
+  {
+    "range": {
+      "low": 5904,
+      "high": 5919.99,
+      "interval": 16
+    },
+    "gis": 441.2,
+    "combinedOasGis": 1089.87
+  },
+  {
+    "range": {
+      "low": 5920,
+      "high": 5951.99,
+      "interval": 32
+    },
+    "gis": 440.2,
+    "combinedOasGis": 1088.87
+  },
+  {
+    "range": {
+      "low": 5952,
+      "high": 5999.99,
+      "interval": 48
+    },
+    "gis": 439.2,
+    "combinedOasGis": 1087.87
+  },
+  {
+    "range": {
+      "low": 6000,
+      "high": 6015.99,
+      "interval": 16
+    },
+    "gis": 438.2,
+    "combinedOasGis": 1086.87
+  },
+  {
+    "range": {
+      "low": 6016,
+      "high": 6047.99,
+      "interval": 32
+    },
+    "gis": 437.2,
+    "combinedOasGis": 1085.87
+  },
+  {
+    "range": {
+      "low": 6048,
+      "high": 6095.99,
+      "interval": 48
+    },
+    "gis": 436.2,
+    "combinedOasGis": 1084.87
+  },
+  {
+    "range": {
+      "low": 6096,
+      "high": 6111.99,
+      "interval": 16
+    },
+    "gis": 435.2,
+    "combinedOasGis": 1083.87
+  },
+  {
+    "range": {
+      "low": 6112,
+      "high": 6143.99,
+      "interval": 32
+    },
+    "gis": 434.2,
+    "combinedOasGis": 1082.87
+  },
+  {
+    "range": {
+      "low": 6144,
+      "high": 6191.99,
+      "interval": 48
+    },
+    "gis": 433.2,
+    "combinedOasGis": 1081.87
+  },
+  {
+    "range": {
+      "low": 6192,
+      "high": 6207.99,
+      "interval": 16
+    },
+    "gis": 432.2,
+    "combinedOasGis": 1080.87
+  },
+  {
+    "range": {
+      "low": 6208,
+      "high": 6239.99,
+      "interval": 32
+    },
+    "gis": 431.2,
+    "combinedOasGis": 1079.87
+  },
+  {
+    "range": {
+      "low": 6240,
+      "high": 6287.99,
+      "interval": 48
+    },
+    "gis": 430.2,
+    "combinedOasGis": 1078.87
+  },
+  {
+    "range": {
+      "low": 6288,
+      "high": 6303.99,
+      "interval": 16
+    },
+    "gis": 429.2,
+    "combinedOasGis": 1077.87
+  },
+  {
+    "range": {
+      "low": 6304,
+      "high": 6335.99,
+      "interval": 32
+    },
+    "gis": 428.2,
+    "combinedOasGis": 1076.87
+  },
+  {
+    "range": {
+      "low": 6336,
+      "high": 6383.99,
+      "interval": 48
+    },
+    "gis": 427.2,
+    "combinedOasGis": 1075.87
+  },
+  {
+    "range": {
+      "low": 6384,
+      "high": 6399.99,
+      "interval": 16
+    },
+    "gis": 426.2,
+    "combinedOasGis": 1074.87
+  },
+  {
+    "range": {
+      "low": 6400,
+      "high": 6431.99,
+      "interval": 32
+    },
+    "gis": 425.2,
+    "combinedOasGis": 1073.87
+  },
+  {
+    "range": {
+      "low": 6432,
+      "high": 6479.99,
+      "interval": 48
+    },
+    "gis": 424.2,
+    "combinedOasGis": 1072.87
+  },
+  {
+    "range": {
+      "low": 6480,
+      "high": 6495.99,
+      "interval": 16
+    },
+    "gis": 423.2,
+    "combinedOasGis": 1071.87
+  },
+  {
+    "range": {
+      "low": 6496,
+      "high": 6527.99,
+      "interval": 32
+    },
+    "gis": 422.2,
+    "combinedOasGis": 1070.87
+  },
+  {
+    "range": {
+      "low": 6528,
+      "high": 6575.99,
+      "interval": 48
+    },
+    "gis": 421.2,
+    "combinedOasGis": 1069.87
+  },
+  {
+    "range": {
+      "low": 6576,
+      "high": 6591.99,
+      "interval": 16
+    },
+    "gis": 420.2,
+    "combinedOasGis": 1068.87
+  },
+  {
+    "range": {
+      "low": 6592,
+      "high": 6623.99,
+      "interval": 32
+    },
+    "gis": 419.2,
+    "combinedOasGis": 1067.87
+  },
+  {
+    "range": {
+      "low": 6624,
+      "high": 6671.99,
+      "interval": 48
+    },
+    "gis": 418.2,
+    "combinedOasGis": 1066.87
+  },
+  {
+    "range": {
+      "low": 6672,
+      "high": 6687.99,
+      "interval": 16
+    },
+    "gis": 417.2,
+    "combinedOasGis": 1065.87
+  },
+  {
+    "range": {
+      "low": 6688,
+      "high": 6719.99,
+      "interval": 32
+    },
+    "gis": 416.2,
+    "combinedOasGis": 1064.87
+  },
+  {
+    "range": {
+      "low": 6720,
+      "high": 6767.99,
+      "interval": 48
+    },
+    "gis": 415.2,
+    "combinedOasGis": 1063.87
+  },
+  {
+    "range": {
+      "low": 6768,
+      "high": 6783.99,
+      "interval": 16
+    },
+    "gis": 414.2,
+    "combinedOasGis": 1062.87
+  },
+  {
+    "range": {
+      "low": 6784,
+      "high": 6815.99,
+      "interval": 32
+    },
+    "gis": 413.2,
+    "combinedOasGis": 1061.87
+  },
+  {
+    "range": {
+      "low": 6816,
+      "high": 6863.99,
+      "interval": 48
+    },
+    "gis": 412.2,
+    "combinedOasGis": 1060.87
+  },
+  {
+    "range": {
+      "low": 6864,
+      "high": 6879.99,
+      "interval": 16
+    },
+    "gis": 411.2,
+    "combinedOasGis": 1059.87
+  },
+  {
+    "range": {
+      "low": 6880,
+      "high": 6911.99,
+      "interval": 32
+    },
+    "gis": 410.2,
+    "combinedOasGis": 1058.87
+  },
+  {
+    "range": {
+      "low": 6912,
+      "high": 6959.99,
+      "interval": 48
+    },
+    "gis": 409.2,
+    "combinedOasGis": 1057.87
+  },
+  {
+    "range": {
+      "low": 6960,
+      "high": 6975.99,
+      "interval": 16
+    },
+    "gis": 408.2,
+    "combinedOasGis": 1056.87
+  },
+  {
+    "range": {
+      "low": 6976,
+      "high": 7007.99,
+      "interval": 32
+    },
+    "gis": 407.2,
+    "combinedOasGis": 1055.87
+  },
+  {
+    "range": {
+      "low": 7008,
+      "high": 7055.99,
+      "interval": 48
+    },
+    "gis": 406.2,
+    "combinedOasGis": 1054.87
+  },
+  {
+    "range": {
+      "low": 7056,
+      "high": 7071.99,
+      "interval": 16
+    },
+    "gis": 405.2,
+    "combinedOasGis": 1053.87
+  },
+  {
+    "range": {
+      "low": 7072,
+      "high": 7103.99,
+      "interval": 32
+    },
+    "gis": 404.2,
+    "combinedOasGis": 1052.87
+  },
+  {
+    "range": {
+      "low": 7104,
+      "high": 7151.99,
+      "interval": 48
+    },
+    "gis": 403.2,
+    "combinedOasGis": 1051.87
+  },
+  {
+    "range": {
+      "low": 7152,
+      "high": 7167.99,
+      "interval": 16
+    },
+    "gis": 402.2,
+    "combinedOasGis": 1050.87
+  },
+  {
+    "range": {
+      "low": 7168,
+      "high": 7199.99,
+      "interval": 32
+    },
+    "gis": 401.2,
+    "combinedOasGis": 1049.87
+  },
+  {
+    "range": {
+      "low": 7200,
+      "high": 7247.99,
+      "interval": 48
+    },
+    "gis": 400.2,
+    "combinedOasGis": 1048.87
+  },
+  {
+    "range": {
+      "low": 7248,
+      "high": 7263.99,
+      "interval": 16
+    },
+    "gis": 399.2,
+    "combinedOasGis": 1047.87
+  },
+  {
+    "range": {
+      "low": 7264,
+      "high": 7295.99,
+      "interval": 32
+    },
+    "gis": 398.2,
+    "combinedOasGis": 1046.87
+  },
+  {
+    "range": {
+      "low": 7296,
+      "high": 7343.99,
+      "interval": 48
+    },
+    "gis": 397.2,
+    "combinedOasGis": 1045.87
+  },
+  {
+    "range": {
+      "low": 7344,
+      "high": 7359.99,
+      "interval": 16
+    },
+    "gis": 396.2,
+    "combinedOasGis": 1044.87
+  },
+  {
+    "range": {
+      "low": 7360,
+      "high": 7391.99,
+      "interval": 32
+    },
+    "gis": 395.2,
+    "combinedOasGis": 1043.87
+  },
+  {
+    "range": {
+      "low": 7392,
+      "high": 7439.99,
+      "interval": 48
+    },
+    "gis": 394.2,
+    "combinedOasGis": 1042.87
+  },
+  {
+    "range": {
+      "low": 7440,
+      "high": 7455.99,
+      "interval": 16
+    },
+    "gis": 393.2,
+    "combinedOasGis": 1041.87
+  },
+  {
+    "range": {
+      "low": 7456,
+      "high": 7487.99,
+      "interval": 32
+    },
+    "gis": 392.2,
+    "combinedOasGis": 1040.87
+  },
+  {
+    "range": {
+      "low": 7488,
+      "high": 7535.99,
+      "interval": 48
+    },
+    "gis": 391.2,
+    "combinedOasGis": 1039.87
+  },
+  {
+    "range": {
+      "low": 7536,
+      "high": 7551.99,
+      "interval": 16
+    },
+    "gis": 390.2,
+    "combinedOasGis": 1038.87
+  },
+  {
+    "range": {
+      "low": 7552,
+      "high": 7583.99,
+      "interval": 32
+    },
+    "gis": 389.2,
+    "combinedOasGis": 1037.87
+  },
+  {
+    "range": {
+      "low": 7584,
+      "high": 7631.99,
+      "interval": 48
+    },
+    "gis": 388.2,
+    "combinedOasGis": 1036.87
+  },
+  {
+    "range": {
+      "low": 7632,
+      "high": 7647.99,
+      "interval": 16
+    },
+    "gis": 387.2,
+    "combinedOasGis": 1035.87
+  },
+  {
+    "range": {
+      "low": 7648,
+      "high": 7679.99,
+      "interval": 32
+    },
+    "gis": 386.2,
+    "combinedOasGis": 1034.87
+  },
+  {
+    "range": {
+      "low": 7680,
+      "high": 7727.99,
+      "interval": 48
+    },
+    "gis": 385.2,
+    "combinedOasGis": 1033.87
+  },
+  {
+    "range": {
+      "low": 7728,
+      "high": 7743.99,
+      "interval": 16
+    },
+    "gis": 384.2,
+    "combinedOasGis": 1032.87
+  },
+  {
+    "range": {
+      "low": 7744,
+      "high": 7775.99,
+      "interval": 32
+    },
+    "gis": 383.2,
+    "combinedOasGis": 1031.87
+  },
+  {
+    "range": {
+      "low": 7776,
+      "high": 7823.99,
+      "interval": 48
+    },
+    "gis": 382.2,
+    "combinedOasGis": 1030.87
+  },
+  {
+    "range": {
+      "low": 7824,
+      "high": 7839.99,
+      "interval": 16
+    },
+    "gis": 381.2,
+    "combinedOasGis": 1029.87
+  },
+  {
+    "range": {
+      "low": 7840,
+      "high": 7871.99,
+      "interval": 32
+    },
+    "gis": 380.2,
+    "combinedOasGis": 1028.87
+  },
+  {
+    "range": {
+      "low": 7872,
+      "high": 7919.99,
+      "interval": 48
+    },
+    "gis": 379.2,
+    "combinedOasGis": 1027.87
+  },
+  {
+    "range": {
+      "low": 7920,
+      "high": 7935.99,
+      "interval": 16
+    },
+    "gis": 378.2,
+    "combinedOasGis": 1026.87
+  },
+  {
+    "range": {
+      "low": 7936,
+      "high": 7967.99,
+      "interval": 32
+    },
+    "gis": 377.2,
+    "combinedOasGis": 1025.87
+  },
+  {
+    "range": {
+      "low": 7968,
+      "high": 8015.99,
+      "interval": 48
+    },
+    "gis": 376.2,
+    "combinedOasGis": 1024.87
+  },
+  {
+    "range": {
+      "low": 8016,
+      "high": 8031.99,
+      "interval": 16
+    },
+    "gis": 375.2,
+    "combinedOasGis": 1023.87
+  },
+  {
+    "range": {
+      "low": 8032,
+      "high": 8063.99,
+      "interval": 32
+    },
+    "gis": 374.2,
+    "combinedOasGis": 1022.87
+  },
+  {
+    "range": {
+      "low": 8064,
+      "high": 8111.99,
+      "interval": 48
+    },
+    "gis": 373.2,
+    "combinedOasGis": 1021.87
+  },
+  {
+    "range": {
+      "low": 8112,
+      "high": 8127.99,
+      "interval": 16
+    },
+    "gis": 372.2,
+    "combinedOasGis": 1020.87
+  },
+  {
+    "range": {
+      "low": 8128,
+      "high": 8159.99,
+      "interval": 32
+    },
+    "gis": 371.68,
+    "combinedOasGis": 1020.35
+  },
+  {
+    "range": {
+      "low": 8160,
+      "high": 8207.99,
+      "interval": 48
+    },
+    "gis": 370.68,
+    "combinedOasGis": 1019.35
+  },
+  {
+    "range": {
+      "low": 8208,
+      "high": 8255.99,
+      "interval": 48
+    },
+    "gis": 369.68,
+    "combinedOasGis": 1018.35
+  },
+  {
+    "range": {
+      "low": 8256,
+      "high": 8303.99,
+      "interval": 48
+    },
+    "gis": 368.68,
+    "combinedOasGis": 1017.35
+  },
+  {
+    "range": {
+      "low": 8304,
+      "high": 8351.99,
+      "interval": 48
+    },
+    "gis": 367.68,
+    "combinedOasGis": 1016.35
+  },
+  {
+    "range": {
+      "low": 8352,
+      "high": 8399.99,
+      "interval": 48
+    },
+    "gis": 366.68,
+    "combinedOasGis": 1015.35
+  },
+  {
+    "range": {
+      "low": 8400,
+      "high": 8447.99,
+      "interval": 48
+    },
+    "gis": 365.68,
+    "combinedOasGis": 1014.35
+  },
+  {
+    "range": {
+      "low": 8448,
+      "high": 8495.99,
+      "interval": 48
+    },
+    "gis": 364.68,
+    "combinedOasGis": 1013.35
+  },
+  {
+    "range": {
+      "low": 8496,
+      "high": 8543.99,
+      "interval": 48
+    },
+    "gis": 363.68,
+    "combinedOasGis": 1012.35
+  },
+  {
+    "range": {
+      "low": 8544,
+      "high": 8591.99,
+      "interval": 48
+    },
+    "gis": 362.68,
+    "combinedOasGis": 1011.35
+  },
+  {
+    "range": {
+      "low": 8592,
+      "high": 8639.99,
+      "interval": 48
+    },
+    "gis": 361.68,
+    "combinedOasGis": 1010.35
+  },
+  {
+    "range": {
+      "low": 8640,
+      "high": 8687.99,
+      "interval": 48
+    },
+    "gis": 360.68,
+    "combinedOasGis": 1009.35
+  },
+  {
+    "range": {
+      "low": 8688,
+      "high": 8735.99,
+      "interval": 48
+    },
+    "gis": 359.68,
+    "combinedOasGis": 1008.35
+  },
+  {
+    "range": {
+      "low": 8736,
+      "high": 8783.99,
+      "interval": 48
+    },
+    "gis": 358.68,
+    "combinedOasGis": 1007.35
+  },
+  {
+    "range": {
+      "low": 8784,
+      "high": 8831.99,
+      "interval": 48
+    },
+    "gis": 357.68,
+    "combinedOasGis": 1006.35
+  },
+  {
+    "range": {
+      "low": 8832,
+      "high": 8879.99,
+      "interval": 48
+    },
+    "gis": 356.68,
+    "combinedOasGis": 1005.35
+  },
+  {
+    "range": {
+      "low": 8880,
+      "high": 8927.99,
+      "interval": 48
+    },
+    "gis": 355.68,
+    "combinedOasGis": 1004.35
+  },
+  {
+    "range": {
+      "low": 8928,
+      "high": 8975.99,
+      "interval": 48
+    },
+    "gis": 354.68,
+    "combinedOasGis": 1003.35
+  },
+  {
+    "range": {
+      "low": 8976,
+      "high": 9023.99,
+      "interval": 48
+    },
+    "gis": 353.68,
+    "combinedOasGis": 1002.35
+  },
+  {
+    "range": {
+      "low": 9024,
+      "high": 9071.99,
+      "interval": 48
+    },
+    "gis": 352.68,
+    "combinedOasGis": 1001.35
+  },
+  {
+    "range": {
+      "low": 9072,
+      "high": 9119.99,
+      "interval": 48
+    },
+    "gis": 351.68,
+    "combinedOasGis": 1000.35
+  },
+  {
+    "range": {
+      "low": 9120,
+      "high": 9167.99,
+      "interval": 48
+    },
+    "gis": 350.68,
+    "combinedOasGis": 999.35
+  },
+  {
+    "range": {
+      "low": 9168,
+      "high": 9215.99,
+      "interval": 48
+    },
+    "gis": 349.68,
+    "combinedOasGis": 998.35
+  },
+  {
+    "range": {
+      "low": 9216,
+      "high": 9263.99,
+      "interval": 48
+    },
+    "gis": 348.68,
+    "combinedOasGis": 997.35
+  },
+  {
+    "range": {
+      "low": 9264,
+      "high": 9311.99,
+      "interval": 48
+    },
+    "gis": 347.68,
+    "combinedOasGis": 996.35
+  },
+  {
+    "range": {
+      "low": 9312,
+      "high": 9359.99,
+      "interval": 48
+    },
+    "gis": 346.68,
+    "combinedOasGis": 995.35
+  },
+  {
+    "range": {
+      "low": 9360,
+      "high": 9407.99,
+      "interval": 48
+    },
+    "gis": 345.68,
+    "combinedOasGis": 994.35
+  },
+  {
+    "range": {
+      "low": 9408,
+      "high": 9455.99,
+      "interval": 48
+    },
+    "gis": 344.68,
+    "combinedOasGis": 993.35
+  },
+  {
+    "range": {
+      "low": 9456,
+      "high": 9503.99,
+      "interval": 48
+    },
+    "gis": 343.68,
+    "combinedOasGis": 992.35
+  },
+  {
+    "range": {
+      "low": 9504,
+      "high": 9551.99,
+      "interval": 48
+    },
+    "gis": 342.68,
+    "combinedOasGis": 991.35
+  },
+  {
+    "range": {
+      "low": 9552,
+      "high": 9599.99,
+      "interval": 48
+    },
+    "gis": 341.68,
+    "combinedOasGis": 990.35
+  },
+  {
+    "range": {
+      "low": 9600,
+      "high": 9647.99,
+      "interval": 48
+    },
+    "gis": 340.68,
+    "combinedOasGis": 989.35
+  },
+  {
+    "range": {
+      "low": 9648,
+      "high": 9695.99,
+      "interval": 48
+    },
+    "gis": 339.68,
+    "combinedOasGis": 988.35
+  },
+  {
+    "range": {
+      "low": 9696,
+      "high": 9743.99,
+      "interval": 48
+    },
+    "gis": 338.68,
+    "combinedOasGis": 987.35
+  },
+  {
+    "range": {
+      "low": 9744,
+      "high": 9791.99,
+      "interval": 48
+    },
+    "gis": 337.68,
+    "combinedOasGis": 986.35
+  },
+  {
+    "range": {
+      "low": 9792,
+      "high": 9839.99,
+      "interval": 48
+    },
+    "gis": 336.68,
+    "combinedOasGis": 985.35
+  },
+  {
+    "range": {
+      "low": 9840,
+      "high": 9887.99,
+      "interval": 48
+    },
+    "gis": 335.68,
+    "combinedOasGis": 984.35
+  },
+  {
+    "range": {
+      "low": 9888,
+      "high": 9935.99,
+      "interval": 48
+    },
+    "gis": 334.68,
+    "combinedOasGis": 983.35
+  },
+  {
+    "range": {
+      "low": 9936,
+      "high": 9983.99,
+      "interval": 48
+    },
+    "gis": 333.68,
+    "combinedOasGis": 982.35
+  },
+  {
+    "range": {
+      "low": 9984,
+      "high": 10031.99,
+      "interval": 48
+    },
+    "gis": 332.68,
+    "combinedOasGis": 981.35
+  },
+  {
+    "range": {
+      "low": 10032,
+      "high": 10079.99,
+      "interval": 48
+    },
+    "gis": 331.68,
+    "combinedOasGis": 980.35
+  },
+  {
+    "range": {
+      "low": 10080,
+      "high": 10127.99,
+      "interval": 48
+    },
+    "gis": 330.68,
+    "combinedOasGis": 979.35
+  },
+  {
+    "range": {
+      "low": 10128,
+      "high": 10175.99,
+      "interval": 48
+    },
+    "gis": 329.68,
+    "combinedOasGis": 978.35
+  },
+  {
+    "range": {
+      "low": 10176,
+      "high": 10223.99,
+      "interval": 48
+    },
+    "gis": 328.68,
+    "combinedOasGis": 977.35
+  },
+  {
+    "range": {
+      "low": 10224,
+      "high": 10271.99,
+      "interval": 48
+    },
+    "gis": 327.68,
+    "combinedOasGis": 976.35
+  },
+  {
+    "range": {
+      "low": 10272,
+      "high": 10319.99,
+      "interval": 48
+    },
+    "gis": 326.68,
+    "combinedOasGis": 975.35
+  },
+  {
+    "range": {
+      "low": 10320,
+      "high": 10367.99,
+      "interval": 48
+    },
+    "gis": 325.68,
+    "combinedOasGis": 974.35
+  },
+  {
+    "range": {
+      "low": 10368,
+      "high": 10415.99,
+      "interval": 48
+    },
+    "gis": 324.68,
+    "combinedOasGis": 973.35
+  },
+  {
+    "range": {
+      "low": 10416,
+      "high": 10463.99,
+      "interval": 48
+    },
+    "gis": 323.68,
+    "combinedOasGis": 972.35
+  },
+  {
+    "range": {
+      "low": 10464,
+      "high": 10511.99,
+      "interval": 48
+    },
+    "gis": 322.68,
+    "combinedOasGis": 971.35
+  },
+  {
+    "range": {
+      "low": 10512,
+      "high": 10559.99,
+      "interval": 48
+    },
+    "gis": 321.68,
+    "combinedOasGis": 970.35
+  },
+  {
+    "range": {
+      "low": 10560,
+      "high": 10607.99,
+      "interval": 48
+    },
+    "gis": 320.68,
+    "combinedOasGis": 969.35
+  },
+  {
+    "range": {
+      "low": 10608,
+      "high": 10655.99,
+      "interval": 48
+    },
+    "gis": 319.68,
+    "combinedOasGis": 968.35
+  },
+  {
+    "range": {
+      "low": 10656,
+      "high": 10703.99,
+      "interval": 48
+    },
+    "gis": 318.68,
+    "combinedOasGis": 967.35
+  },
+  {
+    "range": {
+      "low": 10704,
+      "high": 10751.99,
+      "interval": 48
+    },
+    "gis": 317.68,
+    "combinedOasGis": 966.35
+  },
+  {
+    "range": {
+      "low": 10752,
+      "high": 10799.99,
+      "interval": 48
+    },
+    "gis": 316.68,
+    "combinedOasGis": 965.35
+  },
+  {
+    "range": {
+      "low": 10800,
+      "high": 10847.99,
+      "interval": 48
+    },
+    "gis": 315.68,
+    "combinedOasGis": 964.35
+  },
+  {
+    "range": {
+      "low": 10848,
+      "high": 10895.99,
+      "interval": 48
+    },
+    "gis": 314.68,
+    "combinedOasGis": 963.35
+  },
+  {
+    "range": {
+      "low": 10896,
+      "high": 10943.99,
+      "interval": 48
+    },
+    "gis": 313.68,
+    "combinedOasGis": 962.35
+  },
+  {
+    "range": {
+      "low": 10944,
+      "high": 10991.99,
+      "interval": 48
+    },
+    "gis": 312.68,
+    "combinedOasGis": 961.35
+  },
+  {
+    "range": {
+      "low": 10992,
+      "high": 11039.99,
+      "interval": 48
+    },
+    "gis": 311.68,
+    "combinedOasGis": 960.35
+  },
+  {
+    "range": {
+      "low": 11040,
+      "high": 11087.99,
+      "interval": 48
+    },
+    "gis": 310.68,
+    "combinedOasGis": 959.35
+  },
+  {
+    "range": {
+      "low": 11088,
+      "high": 11135.99,
+      "interval": 48
+    },
+    "gis": 309.68,
+    "combinedOasGis": 958.35
+  },
+  {
+    "range": {
+      "low": 11136,
+      "high": 11183.99,
+      "interval": 48
+    },
+    "gis": 308.68,
+    "combinedOasGis": 957.35
+  },
+  {
+    "range": {
+      "low": 11184,
+      "high": 11231.99,
+      "interval": 48
+    },
+    "gis": 307.68,
+    "combinedOasGis": 956.35
+  },
+  {
+    "range": {
+      "low": 11232,
+      "high": 11279.99,
+      "interval": 48
+    },
+    "gis": 306.68,
+    "combinedOasGis": 955.35
+  },
+  {
+    "range": {
+      "low": 11280,
+      "high": 11327.99,
+      "interval": 48
+    },
+    "gis": 305.68,
+    "combinedOasGis": 954.35
+  },
+  {
+    "range": {
+      "low": 11328,
+      "high": 11375.99,
+      "interval": 48
+    },
+    "gis": 304.68,
+    "combinedOasGis": 953.35
+  },
+  {
+    "range": {
+      "low": 11376,
+      "high": 11423.99,
+      "interval": 48
+    },
+    "gis": 303.68,
+    "combinedOasGis": 952.35
+  },
+  {
+    "range": {
+      "low": 11424,
+      "high": 11471.99,
+      "interval": 48
+    },
+    "gis": 302.68,
+    "combinedOasGis": 951.35
+  },
+  {
+    "range": {
+      "low": 11472,
+      "high": 11519.99,
+      "interval": 48
+    },
+    "gis": 301.68,
+    "combinedOasGis": 950.35
+  },
+  {
+    "range": {
+      "low": 11520,
+      "high": 11567.99,
+      "interval": 48
+    },
+    "gis": 300.68,
+    "combinedOasGis": 949.35
+  },
+  {
+    "range": {
+      "low": 11568,
+      "high": 11615.99,
+      "interval": 48
+    },
+    "gis": 299.68,
+    "combinedOasGis": 948.35
+  },
+  {
+    "range": {
+      "low": 11616,
+      "high": 11663.99,
+      "interval": 48
+    },
+    "gis": 298.68,
+    "combinedOasGis": 947.35
+  },
+  {
+    "range": {
+      "low": 11664,
+      "high": 11711.99,
+      "interval": 48
+    },
+    "gis": 297.68,
+    "combinedOasGis": 946.35
+  },
+  {
+    "range": {
+      "low": 11712,
+      "high": 11759.99,
+      "interval": 48
+    },
+    "gis": 296.68,
+    "combinedOasGis": 945.35
+  },
+  {
+    "range": {
+      "low": 11760,
+      "high": 11807.99,
+      "interval": 48
+    },
+    "gis": 295.68,
+    "combinedOasGis": 944.35
+  },
+  {
+    "range": {
+      "low": 11808,
+      "high": 11855.99,
+      "interval": 48
+    },
+    "gis": 294.68,
+    "combinedOasGis": 943.35
+  },
+  {
+    "range": {
+      "low": 11856,
+      "high": 11903.99,
+      "interval": 48
+    },
+    "gis": 293.68,
+    "combinedOasGis": 942.35
+  },
+  {
+    "range": {
+      "low": 11904,
+      "high": 11951.99,
+      "interval": 48
+    },
+    "gis": 292.68,
+    "combinedOasGis": 941.35
+  },
+  {
+    "range": {
+      "low": 11952,
+      "high": 11999.99,
+      "interval": 48
+    },
+    "gis": 291.68,
+    "combinedOasGis": 940.35
+  },
+  {
+    "range": {
+      "low": 12000,
+      "high": 12047.99,
+      "interval": 48
+    },
+    "gis": 290.68,
+    "combinedOasGis": 939.35
+  },
+  {
+    "range": {
+      "low": 12048,
+      "high": 12095.99,
+      "interval": 48
+    },
+    "gis": 289.68,
+    "combinedOasGis": 938.35
+  },
+  {
+    "range": {
+      "low": 12096,
+      "high": 12143.99,
+      "interval": 48
+    },
+    "gis": 288.68,
+    "combinedOasGis": 937.35
+  },
+  {
+    "range": {
+      "low": 12144,
+      "high": 12191.99,
+      "interval": 48
+    },
+    "gis": 287.68,
+    "combinedOasGis": 936.35
+  },
+  {
+    "range": {
+      "low": 12192,
+      "high": 12239.99,
+      "interval": 48
+    },
+    "gis": 286.68,
+    "combinedOasGis": 935.35
+  },
+  {
+    "range": {
+      "low": 12240,
+      "high": 12287.99,
+      "interval": 48
+    },
+    "gis": 285.68,
+    "combinedOasGis": 934.35
+  },
+  {
+    "range": {
+      "low": 12288,
+      "high": 12335.99,
+      "interval": 48
+    },
+    "gis": 284.68,
+    "combinedOasGis": 933.35
+  },
+  {
+    "range": {
+      "low": 12336,
+      "high": 12383.99,
+      "interval": 48
+    },
+    "gis": 283.68,
+    "combinedOasGis": 932.35
+  },
+  {
+    "range": {
+      "low": 12384,
+      "high": 12431.99,
+      "interval": 48
+    },
+    "gis": 282.68,
+    "combinedOasGis": 931.35
+  },
+  {
+    "range": {
+      "low": 12432,
+      "high": 12479.99,
+      "interval": 48
+    },
+    "gis": 281.68,
+    "combinedOasGis": 930.35
+  },
+  {
+    "range": {
+      "low": 12480,
+      "high": 12527.99,
+      "interval": 48
+    },
+    "gis": 280.68,
+    "combinedOasGis": 929.35
+  },
+  {
+    "range": {
+      "low": 12528,
+      "high": 12575.99,
+      "interval": 48
+    },
+    "gis": 279.68,
+    "combinedOasGis": 928.35
+  },
+  {
+    "range": {
+      "low": 12576,
+      "high": 12623.99,
+      "interval": 48
+    },
+    "gis": 278.68,
+    "combinedOasGis": 927.35
+  },
+  {
+    "range": {
+      "low": 12624,
+      "high": 12671.99,
+      "interval": 48
+    },
+    "gis": 277.68,
+    "combinedOasGis": 926.35
+  },
+  {
+    "range": {
+      "low": 12672,
+      "high": 12719.99,
+      "interval": 48
+    },
+    "gis": 276.68,
+    "combinedOasGis": 925.35
+  },
+  {
+    "range": {
+      "low": 12720,
+      "high": 12767.99,
+      "interval": 48
+    },
+    "gis": 275.68,
+    "combinedOasGis": 924.35
+  },
+  {
+    "range": {
+      "low": 12768,
+      "high": 12815.99,
+      "interval": 48
+    },
+    "gis": 274.68,
+    "combinedOasGis": 923.35
+  },
+  {
+    "range": {
+      "low": 12816,
+      "high": 12863.99,
+      "interval": 48
+    },
+    "gis": 273.68,
+    "combinedOasGis": 922.35
+  },
+  {
+    "range": {
+      "low": 12864,
+      "high": 12911.99,
+      "interval": 48
+    },
+    "gis": 272.68,
+    "combinedOasGis": 921.35
+  },
+  {
+    "range": {
+      "low": 12912,
+      "high": 12959.99,
+      "interval": 48
+    },
+    "gis": 271.68,
+    "combinedOasGis": 920.35
+  },
+  {
+    "range": {
+      "low": 12960,
+      "high": 13007.99,
+      "interval": 48
+    },
+    "gis": 270.68,
+    "combinedOasGis": 919.35
+  },
+  {
+    "range": {
+      "low": 13008,
+      "high": 13055.99,
+      "interval": 48
+    },
+    "gis": 269.68,
+    "combinedOasGis": 918.35
+  },
+  {
+    "range": {
+      "low": 13056,
+      "high": 13103.99,
+      "interval": 48
+    },
+    "gis": 268.68,
+    "combinedOasGis": 917.35
+  },
+  {
+    "range": {
+      "low": 13104,
+      "high": 13151.99,
+      "interval": 48
+    },
+    "gis": 267.68,
+    "combinedOasGis": 916.35
+  },
+  {
+    "range": {
+      "low": 13152,
+      "high": 13199.99,
+      "interval": 48
+    },
+    "gis": 266.68,
+    "combinedOasGis": 915.35
+  },
+  {
+    "range": {
+      "low": 13200,
+      "high": 13247.99,
+      "interval": 48
+    },
+    "gis": 265.68,
+    "combinedOasGis": 914.35
+  },
+  {
+    "range": {
+      "low": 13248,
+      "high": 13295.99,
+      "interval": 48
+    },
+    "gis": 264.68,
+    "combinedOasGis": 913.35
+  },
+  {
+    "range": {
+      "low": 13296,
+      "high": 13343.99,
+      "interval": 48
+    },
+    "gis": 263.68,
+    "combinedOasGis": 912.35
+  },
+  {
+    "range": {
+      "low": 13344,
+      "high": 13391.99,
+      "interval": 48
+    },
+    "gis": 262.68,
+    "combinedOasGis": 911.35
+  },
+  {
+    "range": {
+      "low": 13392,
+      "high": 13439.99,
+      "interval": 48
+    },
+    "gis": 261.68,
+    "combinedOasGis": 910.35
+  },
+  {
+    "range": {
+      "low": 13440,
+      "high": 13487.99,
+      "interval": 48
+    },
+    "gis": 260.68,
+    "combinedOasGis": 909.35
+  },
+  {
+    "range": {
+      "low": 13488,
+      "high": 13535.99,
+      "interval": 48
+    },
+    "gis": 259.68,
+    "combinedOasGis": 908.35
+  },
+  {
+    "range": {
+      "low": 13536,
+      "high": 13583.99,
+      "interval": 48
+    },
+    "gis": 258.68,
+    "combinedOasGis": 907.35
+  },
+  {
+    "range": {
+      "low": 13584,
+      "high": 13631.99,
+      "interval": 48
+    },
+    "gis": 257.68,
+    "combinedOasGis": 906.35
+  },
+  {
+    "range": {
+      "low": 13632,
+      "high": 13679.99,
+      "interval": 48
+    },
+    "gis": 256.68,
+    "combinedOasGis": 905.35
+  },
+  {
+    "range": {
+      "low": 13680,
+      "high": 13727.99,
+      "interval": 48
+    },
+    "gis": 255.68,
+    "combinedOasGis": 904.35
+  },
+  {
+    "range": {
+      "low": 13728,
+      "high": 13775.99,
+      "interval": 48
+    },
+    "gis": 254.68,
+    "combinedOasGis": 903.35
+  },
+  {
+    "range": {
+      "low": 13776,
+      "high": 13823.99,
+      "interval": 48
+    },
+    "gis": 253.68,
+    "combinedOasGis": 902.35
+  },
+  {
+    "range": {
+      "low": 13824,
+      "high": 13871.99,
+      "interval": 48
+    },
+    "gis": 252.68,
+    "combinedOasGis": 901.35
+  },
+  {
+    "range": {
+      "low": 13872,
+      "high": 13919.99,
+      "interval": 48
+    },
+    "gis": 251.68,
+    "combinedOasGis": 900.35
+  },
+  {
+    "range": {
+      "low": 13920,
+      "high": 13967.99,
+      "interval": 48
+    },
+    "gis": 250.68,
+    "combinedOasGis": 899.35
+  },
+  {
+    "range": {
+      "low": 13968,
+      "high": 14015.99,
+      "interval": 48
+    },
+    "gis": 249.68,
+    "combinedOasGis": 898.35
+  },
+  {
+    "range": {
+      "low": 14016,
+      "high": 14063.99,
+      "interval": 48
+    },
+    "gis": 248.68,
+    "combinedOasGis": 897.35
+  },
+  {
+    "range": {
+      "low": 14064,
+      "high": 14111.99,
+      "interval": 48
+    },
+    "gis": 247.68,
+    "combinedOasGis": 896.35
+  },
+  {
+    "range": {
+      "low": 14112,
+      "high": 14159.99,
+      "interval": 48
+    },
+    "gis": 246.68,
+    "combinedOasGis": 895.35
+  },
+  {
+    "range": {
+      "low": 14160,
+      "high": 14207.99,
+      "interval": 48
+    },
+    "gis": 245.68,
+    "combinedOasGis": 894.35
+  },
+  {
+    "range": {
+      "low": 14208,
+      "high": 14255.99,
+      "interval": 48
+    },
+    "gis": 244.68,
+    "combinedOasGis": 893.35
+  },
+  {
+    "range": {
+      "low": 14256,
+      "high": 14303.99,
+      "interval": 48
+    },
+    "gis": 243.68,
+    "combinedOasGis": 892.35
+  },
+  {
+    "range": {
+      "low": 14304,
+      "high": 14351.99,
+      "interval": 48
+    },
+    "gis": 242.68,
+    "combinedOasGis": 891.35
+  },
+  {
+    "range": {
+      "low": 14352,
+      "high": 14399.99,
+      "interval": 48
+    },
+    "gis": 241.68,
+    "combinedOasGis": 890.35
+  },
+  {
+    "range": {
+      "low": 14400,
+      "high": 14447.99,
+      "interval": 48
+    },
+    "gis": 240.68,
+    "combinedOasGis": 889.35
+  },
+  {
+    "range": {
+      "low": 14448,
+      "high": 14495.99,
+      "interval": 48
+    },
+    "gis": 239.68,
+    "combinedOasGis": 888.35
+  },
+  {
+    "range": {
+      "low": 14496,
+      "high": 14543.99,
+      "interval": 48
+    },
+    "gis": 238.68,
+    "combinedOasGis": 887.35
+  },
+  {
+    "range": {
+      "low": 14544,
+      "high": 14591.99,
+      "interval": 48
+    },
+    "gis": 237.68,
+    "combinedOasGis": 886.35
+  },
+  {
+    "range": {
+      "low": 14592,
+      "high": 14639.99,
+      "interval": 48
+    },
+    "gis": 236.68,
+    "combinedOasGis": 885.35
+  },
+  {
+    "range": {
+      "low": 14640,
+      "high": 14687.99,
+      "interval": 48
+    },
+    "gis": 235.68,
+    "combinedOasGis": 884.35
+  },
+  {
+    "range": {
+      "low": 14688,
+      "high": 14735.99,
+      "interval": 48
+    },
+    "gis": 234.68,
+    "combinedOasGis": 883.35
+  },
+  {
+    "range": {
+      "low": 14736,
+      "high": 14783.99,
+      "interval": 48
+    },
+    "gis": 233.68,
+    "combinedOasGis": 882.35
+  },
+  {
+    "range": {
+      "low": 14784,
+      "high": 14831.99,
+      "interval": 48
+    },
+    "gis": 232.68,
+    "combinedOasGis": 881.35
+  },
+  {
+    "range": {
+      "low": 14832,
+      "high": 14879.99,
+      "interval": 48
+    },
+    "gis": 231.68,
+    "combinedOasGis": 880.35
+  },
+  {
+    "range": {
+      "low": 14880,
+      "high": 14927.99,
+      "interval": 48
+    },
+    "gis": 230.68,
+    "combinedOasGis": 879.35
+  },
+  {
+    "range": {
+      "low": 14928,
+      "high": 14975.99,
+      "interval": 48
+    },
+    "gis": 229.68,
+    "combinedOasGis": 878.35
+  },
+  {
+    "range": {
+      "low": 14976,
+      "high": 15023.99,
+      "interval": 48
+    },
+    "gis": 228.68,
+    "combinedOasGis": 877.35
+  },
+  {
+    "range": {
+      "low": 15024,
+      "high": 15071.99,
+      "interval": 48
+    },
+    "gis": 227.68,
+    "combinedOasGis": 876.35
+  },
+  {
+    "range": {
+      "low": 15072,
+      "high": 15119.99,
+      "interval": 48
+    },
+    "gis": 226.68,
+    "combinedOasGis": 875.35
+  },
+  {
+    "range": {
+      "low": 15120,
+      "high": 15167.99,
+      "interval": 48
+    },
+    "gis": 225.68,
+    "combinedOasGis": 874.35
+  },
+  {
+    "range": {
+      "low": 15168,
+      "high": 15215.99,
+      "interval": 48
+    },
+    "gis": 224.68,
+    "combinedOasGis": 873.35
+  },
+  {
+    "range": {
+      "low": 15216,
+      "high": 15263.99,
+      "interval": 48
+    },
+    "gis": 223.68,
+    "combinedOasGis": 872.35
+  },
+  {
+    "range": {
+      "low": 15264,
+      "high": 15311.99,
+      "interval": 48
+    },
+    "gis": 222.68,
+    "combinedOasGis": 871.35
+  },
+  {
+    "range": {
+      "low": 15312,
+      "high": 15359.99,
+      "interval": 48
+    },
+    "gis": 221.68,
+    "combinedOasGis": 870.35
+  },
+  {
+    "range": {
+      "low": 15360,
+      "high": 15407.99,
+      "interval": 48
+    },
+    "gis": 220.68,
+    "combinedOasGis": 869.35
+  },
+  {
+    "range": {
+      "low": 15408,
+      "high": 15455.99,
+      "interval": 48
+    },
+    "gis": 219.68,
+    "combinedOasGis": 868.35
+  },
+  {
+    "range": {
+      "low": 15456,
+      "high": 15503.99,
+      "interval": 48
+    },
+    "gis": 218.68,
+    "combinedOasGis": 867.35
+  },
+  {
+    "range": {
+      "low": 15504,
+      "high": 15551.99,
+      "interval": 48
+    },
+    "gis": 217.68,
+    "combinedOasGis": 866.35
+  },
+  {
+    "range": {
+      "low": 15552,
+      "high": 15599.99,
+      "interval": 48
+    },
+    "gis": 216.68,
+    "combinedOasGis": 865.35
+  },
+  {
+    "range": {
+      "low": 15600,
+      "high": 15647.99,
+      "interval": 48
+    },
+    "gis": 215.68,
+    "combinedOasGis": 864.35
+  },
+  {
+    "range": {
+      "low": 15648,
+      "high": 15695.99,
+      "interval": 48
+    },
+    "gis": 214.68,
+    "combinedOasGis": 863.35
+  },
+  {
+    "range": {
+      "low": 15696,
+      "high": 15743.99,
+      "interval": 48
+    },
+    "gis": 213.68,
+    "combinedOasGis": 862.35
+  },
+  {
+    "range": {
+      "low": 15744,
+      "high": 15791.99,
+      "interval": 48
+    },
+    "gis": 212.68,
+    "combinedOasGis": 861.35
+  },
+  {
+    "range": {
+      "low": 15792,
+      "high": 15839.99,
+      "interval": 48
+    },
+    "gis": 211.68,
+    "combinedOasGis": 860.35
+  },
+  {
+    "range": {
+      "low": 15840,
+      "high": 15887.99,
+      "interval": 48
+    },
+    "gis": 210.68,
+    "combinedOasGis": 859.35
+  },
+  {
+    "range": {
+      "low": 15888,
+      "high": 15935.99,
+      "interval": 48
+    },
+    "gis": 209.68,
+    "combinedOasGis": 858.35
+  },
+  {
+    "range": {
+      "low": 15936,
+      "high": 15983.99,
+      "interval": 48
+    },
+    "gis": 208.68,
+    "combinedOasGis": 857.35
+  },
+  {
+    "range": {
+      "low": 15984,
+      "high": 16031.99,
+      "interval": 48
+    },
+    "gis": 207.68,
+    "combinedOasGis": 856.35
+  },
+  {
+    "range": {
+      "low": 16032,
+      "high": 16079.99,
+      "interval": 48
+    },
+    "gis": 206.68,
+    "combinedOasGis": 855.35
+  },
+  {
+    "range": {
+      "low": 16080,
+      "high": 16127.99,
+      "interval": 48
+    },
+    "gis": 205.68,
+    "combinedOasGis": 854.35
+  },
+  {
+    "range": {
+      "low": 16128,
+      "high": 16175.99,
+      "interval": 48
+    },
+    "gis": 204.68,
+    "combinedOasGis": 853.35
+  },
+  {
+    "range": {
+      "low": 16176,
+      "high": 16223.99,
+      "interval": 48
+    },
+    "gis": 203.68,
+    "combinedOasGis": 852.35
+  },
+  {
+    "range": {
+      "low": 16224,
+      "high": 16271.99,
+      "interval": 48
+    },
+    "gis": 202.68,
+    "combinedOasGis": 851.35
+  },
+  {
+    "range": {
+      "low": 16272,
+      "high": 16319.99,
+      "interval": 48
+    },
+    "gis": 201.68,
+    "combinedOasGis": 850.35
+  },
+  {
+    "range": {
+      "low": 16320,
+      "high": 16367.99,
+      "interval": 48
+    },
+    "gis": 200.68,
+    "combinedOasGis": 849.35
+  },
+  {
+    "range": {
+      "low": 16368,
+      "high": 16415.99,
+      "interval": 48
+    },
+    "gis": 199.68,
+    "combinedOasGis": 848.35
+  },
+  {
+    "range": {
+      "low": 16416,
+      "high": 16463.99,
+      "interval": 48
+    },
+    "gis": 198.68,
+    "combinedOasGis": 847.35
+  },
+  {
+    "range": {
+      "low": 16464,
+      "high": 16511.99,
+      "interval": 48
+    },
+    "gis": 197.68,
+    "combinedOasGis": 846.35
+  },
+  {
+    "range": {
+      "low": 16512,
+      "high": 16559.99,
+      "interval": 48
+    },
+    "gis": 196.68,
+    "combinedOasGis": 845.35
+  },
+  {
+    "range": {
+      "low": 16560,
+      "high": 16607.99,
+      "interval": 48
+    },
+    "gis": 195.68,
+    "combinedOasGis": 844.35
+  },
+  {
+    "range": {
+      "low": 16608,
+      "high": 16655.99,
+      "interval": 48
+    },
+    "gis": 194.68,
+    "combinedOasGis": 843.35
+  },
+  {
+    "range": {
+      "low": 16656,
+      "high": 16703.99,
+      "interval": 48
+    },
+    "gis": 193.68,
+    "combinedOasGis": 842.35
+  },
+  {
+    "range": {
+      "low": 16704,
+      "high": 16751.99,
+      "interval": 48
+    },
+    "gis": 192.68,
+    "combinedOasGis": 841.35
+  },
+  {
+    "range": {
+      "low": 16752,
+      "high": 16799.99,
+      "interval": 48
+    },
+    "gis": 191.68,
+    "combinedOasGis": 840.35
+  },
+  {
+    "range": {
+      "low": 16800,
+      "high": 16847.99,
+      "interval": 48
+    },
+    "gis": 190.68,
+    "combinedOasGis": 839.35
+  },
+  {
+    "range": {
+      "low": 16848,
+      "high": 16895.99,
+      "interval": 48
+    },
+    "gis": 189.68,
+    "combinedOasGis": 838.35
+  },
+  {
+    "range": {
+      "low": 16896,
+      "high": 16943.99,
+      "interval": 48
+    },
+    "gis": 188.68,
+    "combinedOasGis": 837.35
+  },
+  {
+    "range": {
+      "low": 16944,
+      "high": 16991.99,
+      "interval": 48
+    },
+    "gis": 187.68,
+    "combinedOasGis": 836.35
+  },
+  {
+    "range": {
+      "low": 16992,
+      "high": 17039.99,
+      "interval": 48
+    },
+    "gis": 186.68,
+    "combinedOasGis": 835.35
+  },
+  {
+    "range": {
+      "low": 17040,
+      "high": 17087.99,
+      "interval": 48
+    },
+    "gis": 185.68,
+    "combinedOasGis": 834.35
+  },
+  {
+    "range": {
+      "low": 17088,
+      "high": 17135.99,
+      "interval": 48
+    },
+    "gis": 184.68,
+    "combinedOasGis": 833.35
+  },
+  {
+    "range": {
+      "low": 17136,
+      "high": 17183.99,
+      "interval": 48
+    },
+    "gis": 183.68,
+    "combinedOasGis": 832.35
+  },
+  {
+    "range": {
+      "low": 17184,
+      "high": 17231.99,
+      "interval": 48
+    },
+    "gis": 182.68,
+    "combinedOasGis": 831.35
+  },
+  {
+    "range": {
+      "low": 17232,
+      "high": 17279.99,
+      "interval": 48
+    },
+    "gis": 181.68,
+    "combinedOasGis": 830.35
+  },
+  {
+    "range": {
+      "low": 17280,
+      "high": 17327.99,
+      "interval": 48
+    },
+    "gis": 180.68,
+    "combinedOasGis": 829.35
+  },
+  {
+    "range": {
+      "low": 17328,
+      "high": 17375.99,
+      "interval": 48
+    },
+    "gis": 179.68,
+    "combinedOasGis": 828.35
+  },
+  {
+    "range": {
+      "low": 17376,
+      "high": 17423.99,
+      "interval": 48
+    },
+    "gis": 178.68,
+    "combinedOasGis": 827.35
+  },
+  {
+    "range": {
+      "low": 17424,
+      "high": 17471.99,
+      "interval": 48
+    },
+    "gis": 177.68,
+    "combinedOasGis": 826.35
+  },
+  {
+    "range": {
+      "low": 17472,
+      "high": 17519.99,
+      "interval": 48
+    },
+    "gis": 176.68,
+    "combinedOasGis": 825.35
+  },
+  {
+    "range": {
+      "low": 17520,
+      "high": 17567.99,
+      "interval": 48
+    },
+    "gis": 175.68,
+    "combinedOasGis": 824.35
+  },
+  {
+    "range": {
+      "low": 17568,
+      "high": 17615.99,
+      "interval": 48
+    },
+    "gis": 174.68,
+    "combinedOasGis": 823.35
+  },
+  {
+    "range": {
+      "low": 17616,
+      "high": 17663.99,
+      "interval": 48
+    },
+    "gis": 173.68,
+    "combinedOasGis": 822.35
+  },
+  {
+    "range": {
+      "low": 17664,
+      "high": 17711.99,
+      "interval": 48
+    },
+    "gis": 172.68,
+    "combinedOasGis": 821.35
+  },
+  {
+    "range": {
+      "low": 17712,
+      "high": 17759.99,
+      "interval": 48
+    },
+    "gis": 171.68,
+    "combinedOasGis": 820.35
+  },
+  {
+    "range": {
+      "low": 17760,
+      "high": 17807.99,
+      "interval": 48
+    },
+    "gis": 170.68,
+    "combinedOasGis": 819.35
+  },
+  {
+    "range": {
+      "low": 17808,
+      "high": 17855.99,
+      "interval": 48
+    },
+    "gis": 169.68,
+    "combinedOasGis": 818.35
+  },
+  {
+    "range": {
+      "low": 17856,
+      "high": 17903.99,
+      "interval": 48
+    },
+    "gis": 168.68,
+    "combinedOasGis": 817.35
+  },
+  {
+    "range": {
+      "low": 17904,
+      "high": 17951.99,
+      "interval": 48
+    },
+    "gis": 167.68,
+    "combinedOasGis": 816.35
+  },
+  {
+    "range": {
+      "low": 17952,
+      "high": 17999.99,
+      "interval": 48
+    },
+    "gis": 166.68,
+    "combinedOasGis": 815.35
+  },
+  {
+    "range": {
+      "low": 18000,
+      "high": 18047.99,
+      "interval": 48
+    },
+    "gis": 165.68,
+    "combinedOasGis": 814.35
+  },
+  {
+    "range": {
+      "low": 18048,
+      "high": 18095.99,
+      "interval": 48
+    },
+    "gis": 164.68,
+    "combinedOasGis": 813.35
+  },
+  {
+    "range": {
+      "low": 18096,
+      "high": 18143.99,
+      "interval": 48
+    },
+    "gis": 163.68,
+    "combinedOasGis": 812.35
+  },
+  {
+    "range": {
+      "low": 18144,
+      "high": 18191.99,
+      "interval": 48
+    },
+    "gis": 162.68,
+    "combinedOasGis": 811.35
+  },
+  {
+    "range": {
+      "low": 18192,
+      "high": 18239.99,
+      "interval": 48
+    },
+    "gis": 161.68,
+    "combinedOasGis": 810.35
+  },
+  {
+    "range": {
+      "low": 18240,
+      "high": 18287.99,
+      "interval": 48
+    },
+    "gis": 160.68,
+    "combinedOasGis": 809.35
+  },
+  {
+    "range": {
+      "low": 18288,
+      "high": 18335.99,
+      "interval": 48
+    },
+    "gis": 159.68,
+    "combinedOasGis": 808.35
+  },
+  {
+    "range": {
+      "low": 18336,
+      "high": 18383.99,
+      "interval": 48
+    },
+    "gis": 158.68,
+    "combinedOasGis": 807.35
+  },
+  {
+    "range": {
+      "low": 18384,
+      "high": 18431.99,
+      "interval": 48
+    },
+    "gis": 157.68,
+    "combinedOasGis": 806.35
+  },
+  {
+    "range": {
+      "low": 18432,
+      "high": 18479.99,
+      "interval": 48
+    },
+    "gis": 156.68,
+    "combinedOasGis": 805.35
+  },
+  {
+    "range": {
+      "low": 18480,
+      "high": 18527.99,
+      "interval": 48
+    },
+    "gis": 155.68,
+    "combinedOasGis": 804.35
+  },
+  {
+    "range": {
+      "low": 18528,
+      "high": 18575.99,
+      "interval": 48
+    },
+    "gis": 154.68,
+    "combinedOasGis": 803.35
+  },
+  {
+    "range": {
+      "low": 18576,
+      "high": 18623.99,
+      "interval": 48
+    },
+    "gis": 153.68,
+    "combinedOasGis": 802.35
+  },
+  {
+    "range": {
+      "low": 18624,
+      "high": 18671.99,
+      "interval": 48
+    },
+    "gis": 152.68,
+    "combinedOasGis": 801.35
+  },
+  {
+    "range": {
+      "low": 18672,
+      "high": 18719.99,
+      "interval": 48
+    },
+    "gis": 151.68,
+    "combinedOasGis": 800.35
+  },
+  {
+    "range": {
+      "low": 18720,
+      "high": 18767.99,
+      "interval": 48
+    },
+    "gis": 150.68,
+    "combinedOasGis": 799.35
+  },
+  {
+    "range": {
+      "low": 18768,
+      "high": 18815.99,
+      "interval": 48
+    },
+    "gis": 149.68,
+    "combinedOasGis": 798.35
+  },
+  {
+    "range": {
+      "low": 18816,
+      "high": 18863.99,
+      "interval": 48
+    },
+    "gis": 148.68,
+    "combinedOasGis": 797.35
+  },
+  {
+    "range": {
+      "low": 18864,
+      "high": 18911.99,
+      "interval": 48
+    },
+    "gis": 147.68,
+    "combinedOasGis": 796.35
+  },
+  {
+    "range": {
+      "low": 18912,
+      "high": 18959.99,
+      "interval": 48
+    },
+    "gis": 146.68,
+    "combinedOasGis": 795.35
+  },
+  {
+    "range": {
+      "low": 18960,
+      "high": 19007.99,
+      "interval": 48
+    },
+    "gis": 145.68,
+    "combinedOasGis": 794.35
+  },
+  {
+    "range": {
+      "low": 19008,
+      "high": 19055.99,
+      "interval": 48
+    },
+    "gis": 144.68,
+    "combinedOasGis": 793.35
+  },
+  {
+    "range": {
+      "low": 19056,
+      "high": 19103.99,
+      "interval": 48
+    },
+    "gis": 143.68,
+    "combinedOasGis": 792.35
+  },
+  {
+    "range": {
+      "low": 19104,
+      "high": 19151.99,
+      "interval": 48
+    },
+    "gis": 142.68,
+    "combinedOasGis": 791.35
+  },
+  {
+    "range": {
+      "low": 19152,
+      "high": 19199.99,
+      "interval": 48
+    },
+    "gis": 141.68,
+    "combinedOasGis": 790.35
+  },
+  {
+    "range": {
+      "low": 19200,
+      "high": 19247.99,
+      "interval": 48
+    },
+    "gis": 140.68,
+    "combinedOasGis": 789.35
+  },
+  {
+    "range": {
+      "low": 19248,
+      "high": 19295.99,
+      "interval": 48
+    },
+    "gis": 139.68,
+    "combinedOasGis": 788.35
+  },
+  {
+    "range": {
+      "low": 19296,
+      "high": 19343.99,
+      "interval": 48
+    },
+    "gis": 138.68,
+    "combinedOasGis": 787.35
+  },
+  {
+    "range": {
+      "low": 19344,
+      "high": 19391.99,
+      "interval": 48
+    },
+    "gis": 137.68,
+    "combinedOasGis": 786.35
+  },
+  {
+    "range": {
+      "low": 19392,
+      "high": 19439.99,
+      "interval": 48
+    },
+    "gis": 136.68,
+    "combinedOasGis": 785.35
+  },
+  {
+    "range": {
+      "low": 19440,
+      "high": 19487.99,
+      "interval": 48
+    },
+    "gis": 135.68,
+    "combinedOasGis": 784.35
+  },
+  {
+    "range": {
+      "low": 19488,
+      "high": 19535.99,
+      "interval": 48
+    },
+    "gis": 134.68,
+    "combinedOasGis": 783.35
+  },
+  {
+    "range": {
+      "low": 19536,
+      "high": 19583.99,
+      "interval": 48
+    },
+    "gis": 133.68,
+    "combinedOasGis": 782.35
+  },
+  {
+    "range": {
+      "low": 19584,
+      "high": 19631.99,
+      "interval": 48
+    },
+    "gis": 132.68,
+    "combinedOasGis": 781.35
+  },
+  {
+    "range": {
+      "low": 19632,
+      "high": 19679.99,
+      "interval": 48
+    },
+    "gis": 131.68,
+    "combinedOasGis": 780.35
+  },
+  {
+    "range": {
+      "low": 19680,
+      "high": 19727.99,
+      "interval": 48
+    },
+    "gis": 130.68,
+    "combinedOasGis": 779.35
+  },
+  {
+    "range": {
+      "low": 19728,
+      "high": 19775.99,
+      "interval": 48
+    },
+    "gis": 129.68,
+    "combinedOasGis": 778.35
+  },
+  {
+    "range": {
+      "low": 19776,
+      "high": 19823.99,
+      "interval": 48
+    },
+    "gis": 128.68,
+    "combinedOasGis": 777.35
+  },
+  {
+    "range": {
+      "low": 19824,
+      "high": 19871.99,
+      "interval": 48
+    },
+    "gis": 127.68,
+    "combinedOasGis": 776.35
+  },
+  {
+    "range": {
+      "low": 19872,
+      "high": 19919.99,
+      "interval": 48
+    },
+    "gis": 126.68,
+    "combinedOasGis": 775.35
+  },
+  {
+    "range": {
+      "low": 19920,
+      "high": 19967.99,
+      "interval": 48
+    },
+    "gis": 125.68,
+    "combinedOasGis": 774.35
+  },
+  {
+    "range": {
+      "low": 19968,
+      "high": 20015.99,
+      "interval": 48
+    },
+    "gis": 124.68,
+    "combinedOasGis": 773.35
+  },
+  {
+    "range": {
+      "low": 20016,
+      "high": 20063.99,
+      "interval": 48
+    },
+    "gis": 123.68,
+    "combinedOasGis": 772.35
+  },
+  {
+    "range": {
+      "low": 20064,
+      "high": 20111.99,
+      "interval": 48
+    },
+    "gis": 122.68,
+    "combinedOasGis": 771.35
+  },
+  {
+    "range": {
+      "low": 20112,
+      "high": 20159.99,
+      "interval": 48
+    },
+    "gis": 121.68,
+    "combinedOasGis": 770.35
+  },
+  {
+    "range": {
+      "low": 20160,
+      "high": 20207.99,
+      "interval": 48
+    },
+    "gis": 120.68,
+    "combinedOasGis": 769.35
+  },
+  {
+    "range": {
+      "low": 20208,
+      "high": 20255.99,
+      "interval": 48
+    },
+    "gis": 119.68,
+    "combinedOasGis": 768.35
+  },
+  {
+    "range": {
+      "low": 20256,
+      "high": 20303.99,
+      "interval": 48
+    },
+    "gis": 118.68,
+    "combinedOasGis": 767.35
+  },
+  {
+    "range": {
+      "low": 20304,
+      "high": 20351.99,
+      "interval": 48
+    },
+    "gis": 117.68,
+    "combinedOasGis": 766.35
+  },
+  {
+    "range": {
+      "low": 20352,
+      "high": 20399.99,
+      "interval": 48
+    },
+    "gis": 116.68,
+    "combinedOasGis": 765.35
+  },
+  {
+    "range": {
+      "low": 20400,
+      "high": 20447.99,
+      "interval": 48
+    },
+    "gis": 115.68,
+    "combinedOasGis": 764.35
+  },
+  {
+    "range": {
+      "low": 20448,
+      "high": 20495.99,
+      "interval": 48
+    },
+    "gis": 114.68,
+    "combinedOasGis": 763.35
+  },
+  {
+    "range": {
+      "low": 20496,
+      "high": 20543.99,
+      "interval": 48
+    },
+    "gis": 113.68,
+    "combinedOasGis": 762.35
+  },
+  {
+    "range": {
+      "low": 20544,
+      "high": 20591.99,
+      "interval": 48
+    },
+    "gis": 112.68,
+    "combinedOasGis": 761.35
+  },
+  {
+    "range": {
+      "low": 20592,
+      "high": 20639.99,
+      "interval": 48
+    },
+    "gis": 111.68,
+    "combinedOasGis": 760.35
+  },
+  {
+    "range": {
+      "low": 20640,
+      "high": 20687.99,
+      "interval": 48
+    },
+    "gis": 110.68,
+    "combinedOasGis": 759.35
+  },
+  {
+    "range": {
+      "low": 20688,
+      "high": 20735.99,
+      "interval": 48
+    },
+    "gis": 109.68,
+    "combinedOasGis": 758.35
+  },
+  {
+    "range": {
+      "low": 20736,
+      "high": 20783.99,
+      "interval": 48
+    },
+    "gis": 108.68,
+    "combinedOasGis": 757.35
+  },
+  {
+    "range": {
+      "low": 20784,
+      "high": 20831.99,
+      "interval": 48
+    },
+    "gis": 107.68,
+    "combinedOasGis": 756.35
+  },
+  {
+    "range": {
+      "low": 20832,
+      "high": 20879.99,
+      "interval": 48
+    },
+    "gis": 106.68,
+    "combinedOasGis": 755.35
+  },
+  {
+    "range": {
+      "low": 20880,
+      "high": 20927.99,
+      "interval": 48
+    },
+    "gis": 105.68,
+    "combinedOasGis": 754.35
+  },
+  {
+    "range": {
+      "low": 20928,
+      "high": 20975.99,
+      "interval": 48
+    },
+    "gis": 104.68,
+    "combinedOasGis": 753.35
+  },
+  {
+    "range": {
+      "low": 20976,
+      "high": 21023.99,
+      "interval": 48
+    },
+    "gis": 103.68,
+    "combinedOasGis": 752.35
+  },
+  {
+    "range": {
+      "low": 21024,
+      "high": 21071.99,
+      "interval": 48
+    },
+    "gis": 102.68,
+    "combinedOasGis": 751.35
+  },
+  {
+    "range": {
+      "low": 21072,
+      "high": 21119.99,
+      "interval": 48
+    },
+    "gis": 101.68,
+    "combinedOasGis": 750.35
+  },
+  {
+    "range": {
+      "low": 21120,
+      "high": 21167.99,
+      "interval": 48
+    },
+    "gis": 100.68,
+    "combinedOasGis": 749.35
+  },
+  {
+    "range": {
+      "low": 21168,
+      "high": 21215.99,
+      "interval": 48
+    },
+    "gis": 99.68,
+    "combinedOasGis": 748.35
+  },
+  {
+    "range": {
+      "low": 21216,
+      "high": 21263.99,
+      "interval": 48
+    },
+    "gis": 98.68,
+    "combinedOasGis": 747.35
+  },
+  {
+    "range": {
+      "low": 21264,
+      "high": 21311.99,
+      "interval": 48
+    },
+    "gis": 97.68,
+    "combinedOasGis": 746.35
+  },
+  {
+    "range": {
+      "low": 21312,
+      "high": 21359.99,
+      "interval": 48
+    },
+    "gis": 96.68,
+    "combinedOasGis": 745.35
+  },
+  {
+    "range": {
+      "low": 21360,
+      "high": 21407.99,
+      "interval": 48
+    },
+    "gis": 95.68,
+    "combinedOasGis": 744.35
+  },
+  {
+    "range": {
+      "low": 21408,
+      "high": 21455.99,
+      "interval": 48
+    },
+    "gis": 94.68,
+    "combinedOasGis": 743.35
+  },
+  {
+    "range": {
+      "low": 21456,
+      "high": 21503.99,
+      "interval": 48
+    },
+    "gis": 93.68,
+    "combinedOasGis": 742.35
+  },
+  {
+    "range": {
+      "low": 21504,
+      "high": 21551.99,
+      "interval": 48
+    },
+    "gis": 92.68,
+    "combinedOasGis": 741.35
+  },
+  {
+    "range": {
+      "low": 21552,
+      "high": 21599.99,
+      "interval": 48
+    },
+    "gis": 91.68,
+    "combinedOasGis": 740.35
+  },
+  {
+    "range": {
+      "low": 21600,
+      "high": 21647.99,
+      "interval": 48
+    },
+    "gis": 90.68,
+    "combinedOasGis": 739.35
+  },
+  {
+    "range": {
+      "low": 21648,
+      "high": 21695.99,
+      "interval": 48
+    },
+    "gis": 89.68,
+    "combinedOasGis": 738.35
+  },
+  {
+    "range": {
+      "low": 21696,
+      "high": 21743.99,
+      "interval": 48
+    },
+    "gis": 88.68,
+    "combinedOasGis": 737.35
+  },
+  {
+    "range": {
+      "low": 21744,
+      "high": 21791.99,
+      "interval": 48
+    },
+    "gis": 87.68,
+    "combinedOasGis": 736.35
+  },
+  {
+    "range": {
+      "low": 21792,
+      "high": 21839.99,
+      "interval": 48
+    },
+    "gis": 86.68,
+    "combinedOasGis": 735.35
+  },
+  {
+    "range": {
+      "low": 21840,
+      "high": 21887.99,
+      "interval": 48
+    },
+    "gis": 85.68,
+    "combinedOasGis": 734.35
+  },
+  {
+    "range": {
+      "low": 21888,
+      "high": 21935.99,
+      "interval": 48
+    },
+    "gis": 84.68,
+    "combinedOasGis": 733.35
+  },
+  {
+    "range": {
+      "low": 21936,
+      "high": 21983.99,
+      "interval": 48
+    },
+    "gis": 83.68,
+    "combinedOasGis": 732.35
+  },
+  {
+    "range": {
+      "low": 21984,
+      "high": 22031.99,
+      "interval": 48
+    },
+    "gis": 82.68,
+    "combinedOasGis": 731.35
+  },
+  {
+    "range": {
+      "low": 22032,
+      "high": 22079.99,
+      "interval": 48
+    },
+    "gis": 81.68,
+    "combinedOasGis": 730.35
+  },
+  {
+    "range": {
+      "low": 22080,
+      "high": 22127.99,
+      "interval": 48
+    },
+    "gis": 80.68,
+    "combinedOasGis": 729.35
+  },
+  {
+    "range": {
+      "low": 22128,
+      "high": 22175.99,
+      "interval": 48
+    },
+    "gis": 79.68,
+    "combinedOasGis": 728.35
+  },
+  {
+    "range": {
+      "low": 22176,
+      "high": 22223.99,
+      "interval": 48
+    },
+    "gis": 78.68,
+    "combinedOasGis": 727.35
+  },
+  {
+    "range": {
+      "low": 22224,
+      "high": 22271.99,
+      "interval": 48
+    },
+    "gis": 77.68,
+    "combinedOasGis": 726.35
+  },
+  {
+    "range": {
+      "low": 22272,
+      "high": 22319.99,
+      "interval": 48
+    },
+    "gis": 76.68,
+    "combinedOasGis": 725.35
+  },
+  {
+    "range": {
+      "low": 22320,
+      "high": 22367.99,
+      "interval": 48
+    },
+    "gis": 75.68,
+    "combinedOasGis": 724.35
+  },
+  {
+    "range": {
+      "low": 22368,
+      "high": 22415.99,
+      "interval": 48
+    },
+    "gis": 74.68,
+    "combinedOasGis": 723.35
+  },
+  {
+    "range": {
+      "low": 22416,
+      "high": 22463.99,
+      "interval": 48
+    },
+    "gis": 73.68,
+    "combinedOasGis": 722.35
+  },
+  {
+    "range": {
+      "low": 22464,
+      "high": 22511.99,
+      "interval": 48
+    },
+    "gis": 72.68,
+    "combinedOasGis": 721.35
+  },
+  {
+    "range": {
+      "low": 22512,
+      "high": 22559.99,
+      "interval": 48
+    },
+    "gis": 71.68,
+    "combinedOasGis": 720.35
+  },
+  {
+    "range": {
+      "low": 22560,
+      "high": 22607.99,
+      "interval": 48
+    },
+    "gis": 70.68,
+    "combinedOasGis": 719.35
+  },
+  {
+    "range": {
+      "low": 22608,
+      "high": 22655.99,
+      "interval": 48
+    },
+    "gis": 69.68,
+    "combinedOasGis": 718.35
+  },
+  {
+    "range": {
+      "low": 22656,
+      "high": 22703.99,
+      "interval": 48
+    },
+    "gis": 68.68,
+    "combinedOasGis": 717.35
+  },
+  {
+    "range": {
+      "low": 22704,
+      "high": 22751.99,
+      "interval": 48
+    },
+    "gis": 67.68,
+    "combinedOasGis": 716.35
+  },
+  {
+    "range": {
+      "low": 22752,
+      "high": 22799.99,
+      "interval": 48
+    },
+    "gis": 66.68,
+    "combinedOasGis": 715.35
+  },
+  {
+    "range": {
+      "low": 22800,
+      "high": 22847.99,
+      "interval": 48
+    },
+    "gis": 65.68,
+    "combinedOasGis": 714.35
+  },
+  {
+    "range": {
+      "low": 22848,
+      "high": 22895.99,
+      "interval": 48
+    },
+    "gis": 64.68,
+    "combinedOasGis": 713.35
+  },
+  {
+    "range": {
+      "low": 22896,
+      "high": 22943.99,
+      "interval": 48
+    },
+    "gis": 63.68,
+    "combinedOasGis": 712.35
+  },
+  {
+    "range": {
+      "low": 22944,
+      "high": 22991.99,
+      "interval": 48
+    },
+    "gis": 62.68,
+    "combinedOasGis": 711.35
+  },
+  {
+    "range": {
+      "low": 22992,
+      "high": 23039.99,
+      "interval": 48
+    },
+    "gis": 61.68,
+    "combinedOasGis": 710.35
+  },
+  {
+    "range": {
+      "low": 23040,
+      "high": 23087.99,
+      "interval": 48
+    },
+    "gis": 60.68,
+    "combinedOasGis": 709.35
+  },
+  {
+    "range": {
+      "low": 23088,
+      "high": 23135.99,
+      "interval": 48
+    },
+    "gis": 59.68,
+    "combinedOasGis": 708.35
+  },
+  {
+    "range": {
+      "low": 23136,
+      "high": 23183.99,
+      "interval": 48
+    },
+    "gis": 58.68,
+    "combinedOasGis": 707.35
+  },
+  {
+    "range": {
+      "low": 23184,
+      "high": 23231.99,
+      "interval": 48
+    },
+    "gis": 57.68,
+    "combinedOasGis": 706.35
+  },
+  {
+    "range": {
+      "low": 23232,
+      "high": 23279.99,
+      "interval": 48
+    },
+    "gis": 56.68,
+    "combinedOasGis": 705.35
+  },
+  {
+    "range": {
+      "low": 23280,
+      "high": 23327.99,
+      "interval": 48
+    },
+    "gis": 55.68,
+    "combinedOasGis": 704.35
+  },
+  {
+    "range": {
+      "low": 23328,
+      "high": 23375.99,
+      "interval": 48
+    },
+    "gis": 54.68,
+    "combinedOasGis": 703.35
+  },
+  {
+    "range": {
+      "low": 23376,
+      "high": 23423.99,
+      "interval": 48
+    },
+    "gis": 53.68,
+    "combinedOasGis": 702.35
+  },
+  {
+    "range": {
+      "low": 23424,
+      "high": 23471.99,
+      "interval": 48
+    },
+    "gis": 52.68,
+    "combinedOasGis": 701.35
+  },
+  {
+    "range": {
+      "low": 23472,
+      "high": 23519.99,
+      "interval": 48
+    },
+    "gis": 51.68,
+    "combinedOasGis": 700.35
+  },
+  {
+    "range": {
+      "low": 23520,
+      "high": 23567.99,
+      "interval": 48
+    },
+    "gis": 50.68,
+    "combinedOasGis": 699.35
+  },
+  {
+    "range": {
+      "low": 23568,
+      "high": 23615.99,
+      "interval": 48
+    },
+    "gis": 49.68,
+    "combinedOasGis": 698.35
+  },
+  {
+    "range": {
+      "low": 23616,
+      "high": 23663.99,
+      "interval": 48
+    },
+    "gis": 48.68,
+    "combinedOasGis": 697.35
+  },
+  {
+    "range": {
+      "low": 23664,
+      "high": 23711.99,
+      "interval": 48
+    },
+    "gis": 47.68,
+    "combinedOasGis": 696.35
+  },
+  {
+    "range": {
+      "low": 23712,
+      "high": 23759.99,
+      "interval": 48
+    },
+    "gis": 46.68,
+    "combinedOasGis": 695.35
+  },
+  {
+    "range": {
+      "low": 23760,
+      "high": 23807.99,
+      "interval": 48
+    },
+    "gis": 45.68,
+    "combinedOasGis": 694.35
+  },
+  {
+    "range": {
+      "low": 23808,
+      "high": 23855.99,
+      "interval": 48
+    },
+    "gis": 44.68,
+    "combinedOasGis": 693.35
+  },
+  {
+    "range": {
+      "low": 23856,
+      "high": 23903.99,
+      "interval": 48
+    },
+    "gis": 43.68,
+    "combinedOasGis": 692.35
+  },
+  {
+    "range": {
+      "low": 23904,
+      "high": 23951.99,
+      "interval": 48
+    },
+    "gis": 42.68,
+    "combinedOasGis": 691.35
+  },
+  {
+    "range": {
+      "low": 23952,
+      "high": 23999.99,
+      "interval": 48
+    },
+    "gis": 41.68,
+    "combinedOasGis": 690.35
+  },
+  {
+    "range": {
+      "low": 24000,
+      "high": 24047.99,
+      "interval": 48
+    },
+    "gis": 40.68,
+    "combinedOasGis": 689.35
+  },
+  {
+    "range": {
+      "low": 24048,
+      "high": 24095.99,
+      "interval": 48
+    },
+    "gis": 39.68,
+    "combinedOasGis": 688.35
+  },
+  {
+    "range": {
+      "low": 24096,
+      "high": 24143.99,
+      "interval": 48
+    },
+    "gis": 38.68,
+    "combinedOasGis": 687.35
+  },
+  {
+    "range": {
+      "low": 24144,
+      "high": 24191.99,
+      "interval": 48
+    },
+    "gis": 37.68,
+    "combinedOasGis": 686.35
+  },
+  {
+    "range": {
+      "low": 24192,
+      "high": 24239.99,
+      "interval": 48
+    },
+    "gis": 36.68,
+    "combinedOasGis": 685.35
+  },
+  {
+    "range": {
+      "low": 24240,
+      "high": 24287.99,
+      "interval": 48
+    },
+    "gis": 35.68,
+    "combinedOasGis": 684.35
+  },
+  {
+    "range": {
+      "low": 24288,
+      "high": 24335.99,
+      "interval": 48
+    },
+    "gis": 34.68,
+    "combinedOasGis": 683.35
+  },
+  {
+    "range": {
+      "low": 24336,
+      "high": 24383.99,
+      "interval": 48
+    },
+    "gis": 33.68,
+    "combinedOasGis": 682.35
+  },
+  {
+    "range": {
+      "low": 24384,
+      "high": 24431.99,
+      "interval": 48
+    },
+    "gis": 32.68,
+    "combinedOasGis": 681.35
+  },
+  {
+    "range": {
+      "low": 24432,
+      "high": 24479.99,
+      "interval": 48
+    },
+    "gis": 31.68,
+    "combinedOasGis": 680.35
+  },
+  {
+    "range": {
+      "low": 24480,
+      "high": 24527.99,
+      "interval": 48
+    },
+    "gis": 30.68,
+    "combinedOasGis": 679.35
+  },
+  {
+    "range": {
+      "low": 24528,
+      "high": 24575.99,
+      "interval": 48
+    },
+    "gis": 29.68,
+    "combinedOasGis": 678.35
+  },
+  {
+    "range": {
+      "low": 24576,
+      "high": 24623.99,
+      "interval": 48
+    },
+    "gis": 28.68,
+    "combinedOasGis": 677.35
+  },
+  {
+    "range": {
+      "low": 24624,
+      "high": 24671.99,
+      "interval": 48
+    },
+    "gis": 27.68,
+    "combinedOasGis": 676.35
+  },
+  {
+    "range": {
+      "low": 24672,
+      "high": 24719.99,
+      "interval": 48
+    },
+    "gis": 26.68,
+    "combinedOasGis": 675.35
+  },
+  {
+    "range": {
+      "low": 24720,
+      "high": 24767.99,
+      "interval": 48
+    },
+    "gis": 25.68,
+    "combinedOasGis": 674.35
+  },
+  {
+    "range": {
+      "low": 24768,
+      "high": 24815.99,
+      "interval": 48
+    },
+    "gis": 24.68,
+    "combinedOasGis": 673.35
+  },
+  {
+    "range": {
+      "low": 24816,
+      "high": 24863.99,
+      "interval": 48
+    },
+    "gis": 23.68,
+    "combinedOasGis": 672.35
+  },
+  {
+    "range": {
+      "low": 24864,
+      "high": 24911.99,
+      "interval": 48
+    },
+    "gis": 22.68,
+    "combinedOasGis": 671.35
+  },
+  {
+    "range": {
+      "low": 24912,
+      "high": 24959.99,
+      "interval": 48
+    },
+    "gis": 21.68,
+    "combinedOasGis": 670.35
+  },
+  {
+    "range": {
+      "low": 24960,
+      "high": 25007.99,
+      "interval": 48
+    },
+    "gis": 20.68,
+    "combinedOasGis": 669.35
+  },
+  {
+    "range": {
+      "low": 25008,
+      "high": 25055.99,
+      "interval": 48
+    },
+    "gis": 19.68,
+    "combinedOasGis": 668.35
+  },
+  {
+    "range": {
+      "low": 25056,
+      "high": 25103.99,
+      "interval": 48
+    },
+    "gis": 18.68,
+    "combinedOasGis": 667.35
+  },
+  {
+    "range": {
+      "low": 25104,
+      "high": 25151.99,
+      "interval": 48
+    },
+    "gis": 17.68,
+    "combinedOasGis": 666.35
+  },
+  {
+    "range": {
+      "low": 25152,
+      "high": 25199.99,
+      "interval": 48
+    },
+    "gis": 16.68,
+    "combinedOasGis": 665.35
+  },
+  {
+    "range": {
+      "low": 25200,
+      "high": 25247.99,
+      "interval": 48
+    },
+    "gis": 15.68,
+    "combinedOasGis": 664.35
+  },
+  {
+    "range": {
+      "low": 25248,
+      "high": 25295.99,
+      "interval": 48
+    },
+    "gis": 14.68,
+    "combinedOasGis": 663.35
+  },
+  {
+    "range": {
+      "low": 25296,
+      "high": 25343.99,
+      "interval": 48
+    },
+    "gis": 13.68,
+    "combinedOasGis": 662.35
+  },
+  {
+    "range": {
+      "low": 25344,
+      "high": 25391.99,
+      "interval": 48
+    },
+    "gis": 12.68,
+    "combinedOasGis": 661.35
+  },
+  {
+    "range": {
+      "low": 25392,
+      "high": 25439.99,
+      "interval": 48
+    },
+    "gis": 11.68,
+    "combinedOasGis": 660.35
+  },
+  {
+    "range": {
+      "low": 25440,
+      "high": 25487.99,
+      "interval": 48
+    },
+    "gis": 10.68,
+    "combinedOasGis": 659.35
+  },
+  {
+    "range": {
+      "low": 25488,
+      "high": 25535.99,
+      "interval": 48
+    },
+    "gis": 9.68,
+    "combinedOasGis": 658.35
+  },
+  {
+    "range": {
+      "low": 25536,
+      "high": 25583.99,
+      "interval": 48
+    },
+    "gis": 8.68,
+    "combinedOasGis": 657.35
+  },
+  {
+    "range": {
+      "low": 25584,
+      "high": 25631.99,
+      "interval": 48
+    },
+    "gis": 7.68,
+    "combinedOasGis": 656.35
+  },
+  {
+    "range": {
+      "low": 25632,
+      "high": 25679.99,
+      "interval": 48
+    },
+    "gis": 6.68,
+    "combinedOasGis": 655.35
+  },
+  {
+    "range": {
+      "low": 25680,
+      "high": 25727.99,
+      "interval": 48
+    },
+    "gis": 5.68,
+    "combinedOasGis": 654.35
+  },
+  {
+    "range": {
+      "low": 25728,
+      "high": 25775.99,
+      "interval": 48
+    },
+    "gis": 4.68,
+    "combinedOasGis": 653.35
+  },
+  {
+    "range": {
+      "low": 25776,
+      "high": 25823.99,
+      "interval": 48
+    },
+    "gis": 3.68,
+    "combinedOasGis": 652.35
+  },
+  {
+    "range": {
+      "low": 25824,
+      "high": 25871.99,
+      "interval": 48
+    },
+    "gis": 2.68,
+    "combinedOasGis": 651.35
+  },
+  {
+    "range": {
+      "low": 25872,
+      "high": 25919.99,
+      "interval": 48
+    },
+    "gis": 1.68,
+    "combinedOasGis": 650.35
+  },
+  {
+    "range": {
+      "low": 25920,
+      "high": 25967.99,
+      "interval": 48
+    },
+    "gis": 0.68,
+    "combinedOasGis": 649.35
+  }
+]
