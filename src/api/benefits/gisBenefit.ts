@@ -12,19 +12,30 @@ import {
   EntitlementResultOas,
 } from '../definitions/types'
 import legalValues from '../../scrapers/output'
-import { BaseBenefit } from './_base'
-import { EntitlementFormula } from './entitlementFormula'
 import { GisInput } from '../definitions/input'
+import { GisClient } from '../clients/gisClient'
+import {
+  PartnerBenefitStatusHelper,
+  LivingCountryHelper
+} from '../helpers/fieldClasses'
+import roundToTwo from '../helpers/roundToTwo'
+import { GisBase } from './_gisBase'
 
-export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements GisBenefit {
+export class GisBenefit extends GisBase<GisClient, EntitlementResultGeneric> implements GisBenefit {
+  protected benefitKey = BenefitKey.gis
 
-
+    /**
+   * Note that oasResult is optional. If it is provided, then the calculations
+   * will consider Partial OAS. Meaning, when there is Partial OAS, the output
+   * here will compensate for the reduction in OAS. Currently this is only used
+   * for GIS, though it is unconfirmed if ALW/AFS should use this.
+   */
   constructor(
     input: GisInput,
     translations: Translations,
-    private oasResult: BenefitResult<EntitlementResultOas>
+    protected override oasResult: BenefitResult<EntitlementResultOas>
   ) {
-    super(input, translations, BenefitKey.gis)
+    super(new GisClient(input), translations)
   }
 
   protected getEligibility(asOf?: Date, forPartner: boolean = false): EligibilityResult {
@@ -35,13 +46,13 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
     const future = (asOf > now);
 
     // helpers
-    const meetsReqAge = this.age >= 65
-    const meetsReqLiving = this._livingCountry.canada
+    const meetsReqAge = this.client.age >= 65
+    const meetsReqLiving = LivingCountryHelper.isCanada(this.client.livingCountry)
     const meetsReqOas =
       this.oasResult.eligibility.result === ResultKey.ELIGIBLE ||
       this.oasResult.eligibility.result === ResultKey.INCOME_DEPENDENT ||
       this.oasResult.eligibility.result === ResultKey.UNAVAILABLE
-    const meetsReqLegal = this._legalStatus.canadian
+    const meetsReqLegal = this.client.hasLegalStatusCanada
     /*
       This comment may be out of date, and replaced by the comment below (meetsReqIncome).
       Since I'm not certain if it's still relevant, I'll keep it here.
@@ -49,20 +60,20 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
       Please note that the logic below is currently imperfect.
       Specifically, when partnerBenefitStatus == partialOas, we do not know the correct income limit.
     */
-    const maxIncome = this._maritalStatus.single
+    const maxIncome = this.client.isSingle
       ? legalValues.gis.singleIncomeLimit
-      : this._partnerBenefitStatus.anyOas
+      : PartnerBenefitStatusHelper.isAnyOas(this.client.partnerBenefitStatus)
         ? legalValues.gis.spouseOasIncomeLimit
-        : this._partnerBenefitStatus.alw
+        : PartnerBenefitStatusHelper.isAlw(this.client.partnerBenefitStatus)
           ? legalValues.gis.spouseAlwIncomeLimit
           : legalValues.gis.spouseNoOasIncomeLimit
 
     // if income is not provided, assume they meet the income requirement
-    const skipReqIncome = !this._income.provided // refers to partner income
+    const skipReqIncome = this.client.clientIncome === undefined // refers to partner income
 
     const meetsReqIncome =
       skipReqIncome ||
-      this._income.adjustedRelevant < maxIncome ||
+      this.client.adjustedRelevantIncome < maxIncome ||
       /*
         This exception is pretty weird, but necessary to work around the fact that a client can be entitled to GIS
         while being above the GIS income limit. This scenario can happen when the client gets Partial OAS, as
@@ -83,7 +94,7 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
             detail: this.translations.detail.conditional,
           }
         } else if (skipReqIncome) {
-          if (this._income.adjustedRelevant >= maxIncome) {
+          if (this.client.adjustedRelevantIncome >= maxIncome) {
             return {
               result: ResultKey.INCOME_DEPENDENT,
               reason: ResultReason.INCOME,
@@ -102,9 +113,9 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
         }
 
         // move get entitlement amount to here, because when income is not provided, it will cause exception
-        const amount = this.formulaResult()
+        const amount = this.getGisEntitlementAmount()
 
-        if (this._income.adjustedIncome >= maxIncome && amount <= 0) {
+        if (this.client.adjustedClientIncome >= maxIncome && amount <= 0) {
           return {
             result: ResultKey.ELIGIBLE,
             reason: ResultReason.INCOME,
@@ -112,15 +123,15 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
               ? this.translations.detail.gis.futureEligibleIncomeTooHigh
               : this.translations.detail.gis.incomeTooHigh,
           }
-        } else if (this._income.partner !== undefined &&
-          this._income.partner >= maxIncome && amount <= 0) {
+        } else if (this.client.partnerIncome !== undefined &&
+          this.client.partnerIncome >= maxIncome && amount <= 0) {
           return {
             result: ResultKey.ELIGIBLE,
             reason: ResultReason.INCOME,
             detail: this.translations.detail.gis.incomeTooHigh,
           }
         } else if (
-          this._income.adjustedRelevant >= maxIncome &&
+          this.client.adjustedRelevantIncome >= maxIncome &&
           amount <= 0
         ) {
           return {
@@ -144,7 +155,7 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
           detail: this.translations.detail.eligibleWhen65,
         }
       }
-    } else if (!meetsReqLiving && this._livingCountry.provided) {
+    } else if (!meetsReqLiving && this.client.livingCountry !== undefined) {
       return {
         result: ResultKey.INELIGIBLE,
         reason: ResultReason.LIVING_COUNTRY,
@@ -186,7 +197,7 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
       }
     // income is not provided, and they are eligible depending on income? entitlement unavailable.
     if (
-      !this._income.provided &&
+      !this.client.isIncomeProvided &&
       this.eligibility.result === ResultKey.INCOME_DEPENDENT
     ) {
       return {
@@ -197,7 +208,7 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
     }
 
     // marital status is invSeparated? entitlement unavailable.
-    if (this._maritalStatus.invSeparated) {
+    if (this.client.isInvSeparated) {
       this.eligibility.detail =
         this.translations.detail.eligibleEntitlementUnavailable
       return {
@@ -208,7 +219,7 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
     }
 
     // otherwise, let's do it!
-    const formulaResult = this.formulaResult()
+    const formulaResult = this.getGisEntitlementAmount()
 
     if (formulaResult === -1)
       throw new Error(
@@ -234,21 +245,6 @@ export class GisBenefit extends BaseBenefit<EntitlementResultGeneric> implements
     //     this.translations.detail.eligibleEntitlementUnavailable
 
     return { result: formulaResult, type, autoEnrollment }
-  }
-
-  /**
-   * Just the formula to get the amount
-   */
-  protected formulaResult(): number {
-    const gisResult = new EntitlementFormula(
-      this._income.adjustedRelevant,
-      this._maritalStatus,
-      this._partnerBenefitStatus,
-      this.age,
-      this.oasResult
-    ).getEntitlementAmount()
-
-    return gisResult
   }
 
 }

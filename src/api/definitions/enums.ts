@@ -19,10 +19,16 @@ export enum MaritalStatus {
   WIDOWED = 'widowed',
   INV_SEPARATED = 'invSeparated',
 }
+export function isMaritalStatus(x: any): x is MaritalStatus {
+  return Object.values(MaritalStatus).includes(x);
+}
 
 export enum LegalStatus {
   YES = 'yes',
   NO = 'no',
+}
+export function isLegalStatus(x: any): x is LegalStatus {
+  return Object.values(LegalStatus).includes(x);
 }
 
 export enum PartnerBenefitStatus {
@@ -57,6 +63,15 @@ export enum ResultKey {
   INVALID = 'invalid',
   INCOME_DEPENDENT = 'incomeDependent',
   WILL_BE_ELIGIBLE = 'willBeEligible',
+}
+
+export enum GisSituation {
+  SINGLE = 'SINGLE',
+  PARTNER_OAS = 'PARTNER_OAS',
+  PARTNER_NO_OAS = 'PARTNER_NO_OAS',
+  PARTNER_ALW = 'PARTNER_ALW',
+  ALW = 'ALW',
+  AFS = 'AFS',
 }
 
 // not displayed in the UI

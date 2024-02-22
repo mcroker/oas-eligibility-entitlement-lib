@@ -4,49 +4,29 @@ import {
   EntitlementResultType,
   ResultKey,
   ResultReason,
-  LivingCountry,
-  MaritalStatus,
-  LegalStatus,
-  PartnerBenefitStatus,
 } from '../definitions/enums'
 import {
   EligibilityResult,
   EntitlementResultGeneric,
 } from '../definitions/types'
 import legalValues from '../../scrapers/output'
-import { BaseBenefit } from './_base'
-import { EntitlementFormula } from './entitlementFormula'
-import { AlwsInput } from '../definitions/input'
+import { AlwInput } from '../definitions/input'
+import { AlwClient } from '../clients/alwClient'
+import {
+  PartnerBenefitStatusHelper,
+  LivingCountryHelper
+} from '../helpers/fieldClasses'
+import { GisBase } from './_gisBase'
 
-export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements AlwsInput {
-
-  single?: Boolean
-
-  public get relevantIncome(): number {
-    return this.single
-      ? this._income.adjustedIncome
-      : this._income.adjustedRelevant
-  }
-
-  public yearsInCanadaSince18: number
-  public everLivedSocialCountry: boolean
-  public livedOnlyInCanada: boolean
-  public override maritalStatus: MaritalStatus
-  public override legalStatus: LegalStatus
-  public override partnerBenefitStatus: PartnerBenefitStatus 
+export class AlwBenefit extends GisBase<AlwClient, EntitlementResultGeneric> {
+  protected benefitKey = BenefitKey.alw
 
   constructor(
-    input: AlwsInput,
+    input: AlwInput,
     translations: Translations,
     single?: Boolean // TODO
   ) {
-    super(input, translations, BenefitKey.alw)
-    this.yearsInCanadaSince18 = input.yearsInCanadaSince18;
-    this.everLivedSocialCountry = input.everLivedSocialCountry;
-    this.livedOnlyInCanada = input.livedOnlyInCanada;
-    this.maritalStatus = input.maritalStatus;
-    this.legalStatus = input.legalStatus;
-    this.partnerBenefitStatus = input.partnerBenefitStatus;
+    super(new AlwClient(input), translations)
   }
 
   protected getEligibility(asOf?: Date, forPartner: boolean = false): EligibilityResult {
@@ -57,25 +37,25 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
     const future = (asOf > now);
 
     // helpers
-    const meetsReqMarital = this._maritalStatus.partnered
-    const meetsReqAge = 60 <= this.age && this.age < 65
-    const overAgeReq = 65 <= this.age
-    const underAgeReq = this.age < 60
-    const meetsReqCountry = this._livingCountry.canada
+    const meetsReqMarital = this.client.isPartnered
+    const meetsReqAge = 60 <= this.client.age && this.client.age < 65
+    const overAgeReq = 65 <= this.client.age
+    const underAgeReq = this.client.age < 60
+    const meetsReqCountry = this.client.isLivingInCanada
 
     // Partner must live in Canada to receive GIS
     const meetsReqPartner =
-      this._partnerBenefitStatus.gis &&
-      this._partnerLivingCountry.value === LivingCountry.CANADA
+      PartnerBenefitStatusHelper.isGis(this.client.partnerBenefitStatus) &&
+      LivingCountryHelper.isCanada(this.client.partnerLivingCountry)
 
     // income must be provided, partner cannot be eligible for gis without income
-    const incomeNotProvided = !this._income.provided
+    const incomeNotProvided = this.client.clientIncome === undefined
     const maxIncome = legalValues.alw.alwIncomeLimit
-    const meetsReqIncome = this._income.adjustedRelevant <= maxIncome
+    const meetsReqIncome = this.client.adjustedRelevantIncome <= maxIncome
     const requiredYearsInCanada = 10
     const meetsReqYears =
-      this.yearsInCanadaSince18 >= requiredYearsInCanada
-    const meetsReqLegal = this._legalStatus.canadian
+      this.client.yearsInCanadaSince18 >= requiredYearsInCanada
+    const meetsReqLegal = this.client.hasLegalStatusCanada
 
     // main checks
     if (
@@ -90,14 +70,14 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
         return {
           result: ResultKey.INELIGIBLE,
           reason: ResultReason.INCOME_MISSING,
-          detail: this._partnerBenefitStatus.none
+          detail: PartnerBenefitStatusHelper.isNone(this.client.partnerBenefitStatus)
             ? this.translations.detail.alwEligibleButPartnerAlreadyIs
             : this.translations.detail.alwNotEligible,
         }
       } else if (
         meetsReqAge &&
         !incomeNotProvided &&
-        this._partnerBenefitStatus.none
+        PartnerBenefitStatusHelper.isNone(this.client.partnerBenefitStatus)
       ) {
         return {
           result: ResultKey.INELIGIBLE,
@@ -105,7 +85,7 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
           detail: this.translations.detail.alwEligibleButPartnerAlreadyIs,
         }
       } else if (meetsReqAge) {
-        const amount = this.formulaResult()
+        const amount = this.getGisEntitlementAmount()
 
         // client is Eligible however if the amount returned is 0 it requires a different text
         if (amount === 0) {
@@ -123,7 +103,7 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
               : this.translations.detail.eligible,
           }
         }
-      } else if (this.age == 59) {
+      } else if (this.client.age == 59) {
         return {
           result: ResultKey.INELIGIBLE,
           reason: ResultReason.AGE_YOUNG,
@@ -146,7 +126,7 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
       return {
         result: ResultKey.INELIGIBLE,
         reason: ResultReason.INCOME_MISSING,
-        detail: this._maritalStatus.partnered
+        detail: this.client.isPartnered
           ? this.translations.detail.alwNotEligible
           : this.translations.detail.alwEligibleButPartnerAlreadyIs,
       }
@@ -162,7 +142,7 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
         reason: ResultReason.AGE_YOUNG,
         detail: this.translations.detail.alwNotEligible,
       }
-    } else if (!meetsReqMarital && this._maritalStatus.provided) {
+    } else if (!meetsReqMarital && this.client.maritalStatus !== undefined) {
       return {
         result: ResultKey.INELIGIBLE,
         reason: ResultReason.MARITAL,
@@ -173,7 +153,7 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
         result: ResultKey.INELIGIBLE,
         reason: ResultReason.PARTNER,
         //detail: this.translations.detail.alwNotEligible,
-        detail: !this._partnerBenefitStatus.provided
+        detail: this.client.partnerBenefitStatus === undefined
           ? this.translations.detail.alwNotEligible
           : this.translations.detail.alwEligibleButPartnerAlreadyIs,
       }
@@ -193,8 +173,8 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
       }
     } else if (!meetsReqYears) {
       if (
-        this._livingCountry.agreement ||
-        this.everLivedSocialCountry
+        LivingCountryHelper.hasAgreement(this.client.livingCountry) ||
+        this.client.everLivedSocialCountry
       ) {
         if (meetsReqAge) {
           return {
@@ -255,7 +235,7 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
 
     // income is not provided, and they are eligible depending on income? entitlement unavailable.
     if (
-      !this._income.provided &&
+      this.client.clientIncome === undefined &&
       this.eligibility.result === ResultKey.INCOME_DEPENDENT
     )
       return {
@@ -266,7 +246,7 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
 
     // otherwise, let's do it!
 
-    const formulaResult = this.formulaResult()
+    const formulaResult = this.getGisEntitlementAmount()
 
     const type =
       formulaResult === -1
@@ -277,24 +257,25 @@ export class AlwBenefit extends BaseBenefit<EntitlementResultGeneric> implements
   }
 
   /**
-   * Just the formula to get the amount
-   */
-  protected formulaResult(): number {
-    const formulaResult = new EntitlementFormula(
-      this.relevantIncome,
-      this._maritalStatus,
-      this._partnerBenefitStatus,
-      this.age
-    ).getEntitlementAmount()
-
-    return formulaResult
-  }
-
-  /**
    * For this benefit, always return false, because we don't know any better as of now.
    */
   protected override getAutoEnrollment(): boolean {
     return false
+  }
+
+  static yearsUntilALW(age: number, residency: number) {
+    if ((age >= 60 && age <= 64 && residency >= 10) || age > 64) {
+      return null
+    }
+
+    let ageDiff = Math.max(0, 60 - age)
+    let residencyDiff = Math.max(0, 10 - residency)
+
+    if (age + residencyDiff > 64) {
+      return null
+    }
+
+    return Math.max(ageDiff, residencyDiff)
   }
 
 }

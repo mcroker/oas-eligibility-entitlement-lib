@@ -1,25 +1,24 @@
+import { Translations } from '../i18n'
 import {
   EntitlementResultType,
+  GisSituation,
   MaritalStatus,
 } from '../definitions/enums'
-import { BenefitResult, EntitlementResultOas } from '../definitions/types'
 import {
-  MaritalStatusHelper,
+  BenefitResult,
+  EntitlementResultGeneric,
+  EntitlementResultOas,
+} from '../definitions/types'
+import legalValues from '../../scrapers/output'
+import { BaseBenefit } from './_base'
+import { GisClient } from '../clients/gisClient'
+import {
   PartnerBenefitStatusHelper,
 } from '../helpers/fieldClasses'
 import roundToTwo from '../helpers/roundToTwo'
-import legalValues from '../../scrapers/output'
 
-export enum GisSituation {
-  SINGLE = 'SINGLE',
-  PARTNER_OAS = 'PARTNER_OAS',
-  PARTNER_NO_OAS = 'PARTNER_NO_OAS',
-  PARTNER_ALW = 'PARTNER_ALW',
-  ALW = 'ALW',
-  AFS = 'AFS',
-}
+export abstract class GisBase<C extends GisClient, R extends EntitlementResultGeneric> extends BaseBenefit<C, R> {
 
-export class EntitlementFormula {
   private readonly gisIncrements: number = 24
   private readonly gisStatus: number
 
@@ -70,19 +69,18 @@ export class EntitlementFormula {
   )
 
   /**
-   * Note that oasResult is optional. If it is provided, then the calculations
-   * will consider Partial OAS. Meaning, when there is Partial OAS, the output
-   * here will compensate for the reduction in OAS. Currently this is only used
-   * for GIS, though it is unconfirmed if ALW/AFS should use this.
-   */
+* Note that oasResult is optional. If it is provided, then the calculations
+* will consider Partial OAS. Meaning, when there is Partial OAS, the output
+* here will compensate for the reduction in OAS. Currently this is only used
+* for GIS, though it is unconfirmed if ALW/AFS should use this.
+*/
   constructor(
-    private income: number,
-    private maritalStatus: MaritalStatusHelper,
-    private partnerBenefitStatus: PartnerBenefitStatusHelper,
-    private age: number,
-    private oasResult: BenefitResult<EntitlementResultOas> | undefined = undefined,
+    input: C,
+    translations: Translations,
+    protected oasResult?: BenefitResult<EntitlementResultOas>
   ) {
-    this.gisStatus = this.maritalStatus.single ? 1 : 2
+    super(input, translations)
+    this.gisStatus = this.client.isSingle ? 1 : 2
 
     /*
       Don't simply remove this line below, it needs proper handling if to be
@@ -90,7 +88,7 @@ export class EntitlementFormula {
       single for one scenario, consider them partnered for another scenario,
       and then return whichever scenario is higher.
     */
-    if (maritalStatus.invSeparated)
+    if (this.client.isInvSeparated)
       throw new Error(
         'involuntarily separated is not implemented in the entitlement logic yet'
       )
@@ -99,7 +97,7 @@ export class EntitlementFormula {
   /**
    * The main entrypoint for all the processing.
    */
-  getEntitlementAmount(): number {
+  protected getGisEntitlementAmount(): number {
     const preOasAmount =
       this.calculationMethod === 'STATIC'
         ? this.staticResult
@@ -113,7 +111,7 @@ export class EntitlementFormula {
         legalValues.oas.amount - this.oasResult.entitlement.result65To74
 
       // GIS Partial pensioner < 40 yrs in Canada and 75+ yrs, gets 10% more.
-      const superGIS = this.age >= 75 ? oasCoverageAmount * 0.1 : 0
+      const superGIS = this.client.age >= 75 ? oasCoverageAmount * 0.1 : 0
 
       // Always return 0 when result is negative
       return preOasAmount + oasCoverageAmount > 0
@@ -126,18 +124,18 @@ export class EntitlementFormula {
    * There are six clear "situations" a client can fall into, depending on their partner.
    */
   private get gisSituation(): GisSituation {
-    if (this.maritalStatus.single) {
+    if (this.client.isSingle) {
       if (
-        this.maritalStatus.value === MaritalStatus.WIDOWED &&
-        this.age >= 60 &&
-        this.age < 65
+        this.client.maritalStatus === MaritalStatus.WIDOWED &&
+        this.client.age >= 60 &&
+        this.client.age < 65
       )
         return GisSituation.AFS
       else return GisSituation.SINGLE
     } else {
-      if (this.partnerBenefitStatus.anyOas)
-        return this.age >= 65 ? GisSituation.PARTNER_OAS : GisSituation.ALW
-      else if (this.partnerBenefitStatus.alw) return GisSituation.PARTNER_ALW
+      if (PartnerBenefitStatusHelper.isAnyOas(this.client.partnerBenefitStatus))
+        return this.client.age >= 65 ? GisSituation.PARTNER_OAS : GisSituation.ALW
+      else if (PartnerBenefitStatusHelper.isAlw(this.client.partnerBenefitStatus)) return GisSituation.PARTNER_ALW
       else return GisSituation.PARTNER_NO_OAS
     }
   }
@@ -148,8 +146,8 @@ export class EntitlementFormula {
    * As well, in the STATIC case, all logic will be skipped and a predefined amount will be used instead.
    */
   private get calculationMethod(): 'LOW' | 'HIGH' | 'STATIC' {
-    if (this.income < this.incomeBrackets.low) return 'LOW'
-    else if (this.income >= this.incomeBrackets.high) return 'HIGH'
+    if (this.client.clientIncome < this.incomeBrackets.low) return 'LOW'
+    else if (this.client.clientIncome >= this.incomeBrackets.high) return 'HIGH'
     else return 'STATIC'
   }
 
@@ -219,7 +217,7 @@ export class EntitlementFormula {
    */
   private get actualTopup() {
     const topupMethod: 'BASIC' | 'CALCULATED' =
-      this.income < 2000 * this.gisStatus ? 'BASIC' : 'CALCULATED'
+      this.client.clientIncome < 2000 * this.gisStatus ? 'BASIC' : 'CALCULATED'
     switch (topupMethod) {
       case 'BASIC':
         return this.basicTopupAmount
@@ -227,7 +225,7 @@ export class EntitlementFormula {
         const gisTopupCalculatedAmount =
           this.basicTopupAmount -
           Math.floor(
-            (this.income - 2000 * this.gisStatus) /
+            (this.client.clientIncome - 2000 * this.gisStatus) /
             (this.gisIncrements * this.gisStatus * 2)
           )
         return Math.max(0, gisTopupCalculatedAmount)
@@ -311,7 +309,7 @@ export class EntitlementFormula {
     return Math.max(
       0,
       Math.floor(
-        (this.income - this.subFromIncome) /
+        (this.client.clientIncome - this.subFromIncome) /
         (this.gisIncrements * this.incomeIncrementMultiplier)
       )
     )
@@ -354,4 +352,5 @@ export class EntitlementFormula {
         return this.calculationMethod === 'HIGH' ? 1 : 2
     }
   }
+
 }

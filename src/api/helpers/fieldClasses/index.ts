@@ -1,5 +1,4 @@
-export { IncomeHelper } from './incomeHelper';
-export { LegalStatusHelper } from './legalStatusHelper';
-export { LivingCountryHelper } from './livingCountryHelper';
-export { MaritalStatusHelper } from './maritalStatusHelper';
-export { PartnerBenefitStatusHelper } from './partnerBenefitStatusHelper';
+export * from './incomeHelper';
+export * from './livingCountryHelper';
+export * from './partnerBenefitStatusHelper';
+export * from './ageHelper';

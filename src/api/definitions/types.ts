@@ -1,12 +1,3 @@
-// import Joi from 'joi'
-import { Translations } from '../i18n'
-import {
-  IncomeHelper,
-  LegalStatusHelper,
-  LivingCountryHelper,
-  MaritalStatusHelper,
-  PartnerBenefitStatusHelper,
-} from '../helpers/fieldClasses'
 import {
   BenefitKey,
   EntitlementResultType,
@@ -102,4 +93,12 @@ export interface MetaDataObject {
 export interface MonthsYears {
   months: number
   years: number
+}
+
+export interface MonthYear {
+  month: number
+  year: number
+}
+export function isMonthYear(x: any): x is MonthYear {
+  return typeof x.month === 'number' && typeof x.year === 'number'
 }

@@ -2,8 +2,6 @@ import { Translations } from '../i18n'
 import {
   BenefitKey,
   EntitlementResultType,
-  LegalStatus,
-  MaritalStatus,
   ResultKey,
   ResultReason,
 } from '../definitions/enums'
@@ -13,76 +11,57 @@ import {
   MonthsYears,
 } from '../definitions/types'
 import roundToTwo from '../helpers/roundToTwo'
-import { getDeferralIncrease } from '../helpers/utils'
+import { AgeHelper } from '../helpers/fieldClasses'
 import legalValues from '../../scrapers/output'
 import { BaseBenefit } from './_base'
 import { OasInput } from '../definitions/input'
-import { IncomeHelper, LegalStatusHelper, LivingCountryHelper, MaritalStatusHelper } from '../helpers/fieldClasses'
+import { OasClient } from '../clients/oasClient'
+import { LivingCountryHelper } from '../helpers/fieldClasses'
 
-export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements OasInput {
-
-  public everLivedSocialCountry: boolean
-  public yearsInCanadaSince18: number
-  public oasDeferDuration: string
-
-  public override legalStatus: LegalStatus;
+export class OasBenefit extends BaseBenefit<OasClient, EntitlementResultOas> {
+  protected benefitKey: BenefitKey = BenefitKey.oas
 
   constructor(
     input: OasInput,
     translations: Translations,
   ) {
-    super(input, translations, BenefitKey.oas);
-    this.everLivedSocialCountry = input.everLivedSocialCountry;
-    this.yearsInCanadaSince18 = input.yearsInCanadaSince18;
-    this.oasDeferDuration = input.oasDeferDuration;
-    this.legalStatus = input.legalStatus;
-  }
-
-  getIncome(forPartner?: boolean): number {
-    if (forPartner) {
-      const partnerIncome = this.partnerIncome;
-      if (partnerIncome === undefined) {
-        throw new Error('Partner income not provided');
-      }
-      return partnerIncome;
-    } else {
-      return this.income
-    }
+    super(new OasClient(input), translations)
   }
 
   /**
    * Cacluate individual's eligability for OAS
    * 
    * @param asOf  Date for which calculation is to be performed
-   * @returns 
+   * @param forPartner  Flag to indicate if the calculation is for partner
+   * 
+   * @returns EligibilityResult
    */
-  protected getEligibility(asOf?: Date, forPartner: boolean = false): EligibilityResult {
-
+  protected getEligibility(asOf?: Date): EligibilityResult {
     // Default to current date
     const now = new Date();
     asOf = (asOf !== undefined) ? asOf : now;
     const future = (asOf > now);
 
     // helpers
-    const meetsReqAge = this.age >= 65
+    const meetsReqAge = this.client.age >= 65
 
     // if income is not provided (only check client income), assume they meet the income requirement
-    const income = this.getIncome(forPartner);
+    const income = this.client.clientIncome;
     const skipReqIncome = income === undefined
 
     // income limit is higher at age 75
     const incomeLimit =
-      this.age >= 75
+      this.client.age >= 75
         ? legalValues.oas.incomeLimit75
         : legalValues.oas.incomeLimit
 
     // Income is irrelevant therefore next will always be true
     const meetsReqIncome = skipReqIncome || income >= 0
 
-    const requiredYearsInCanada = this._livingCountry.canada ? 10 : 20
+    const requiredYearsInCanada = this.client.isLivingInCanada ? 10 : 20
     const meetsReqYears =
-      this.yearsInCanadaSince18 >= requiredYearsInCanada
-    const meetsReqLegal = this._legalStatus.canadian
+      this.client.yearsInCanadaSince18 >= requiredYearsInCanada
+    const meetsReqLegal = this.client.hasLegalStatusCanada
 
     // main checks
     if (meetsReqIncome && meetsReqLegal && meetsReqYears) {
@@ -99,7 +78,7 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
           reason:
             income > incomeLimit
               ? ResultReason.INCOME
-              : this.age >= 65 && this.age < 70
+              : this.client.age >= 65 && this.client.age < 70
                 ? ResultReason.AGE_65_TO_69
                 : ResultReason.AGE_70_AND_OVER,
           detail:
@@ -111,7 +90,7 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
                 ? this.translations.detail.futureEligible
                 : this.translations.detail.eligible,
         }
-      } else if (this.age >= 64 && this.age < 65) {
+      } else if (this.client.age >= 64 && this.client.age < 65) {
         return {
           result: ResultKey.INELIGIBLE,
           reason: ResultReason.AGE_YOUNG_64,
@@ -132,8 +111,8 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
       }
     } else if (!meetsReqYears) {
       if (
-        this._livingCountry.agreement ||
-        this.everLivedSocialCountry
+        LivingCountryHelper.hasAgreement(this.client.livingCountry) ||
+        this.client.everLivedSocialCountry
       ) {
         if (meetsReqAge) {
           return {
@@ -175,7 +154,7 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
 
   // the calculation piece is missing validation, instead, it directly
   // calculate with the legal value. Will revist this piece.
-  protected getEntitlement(asOf?: Date, forPartner: boolean = true, forDeferral: boolean = false): EntitlementResultOas {
+  protected getEntitlement(asOf?: Date): EntitlementResultOas {
 
     // Default to current date
     const now = new Date();
@@ -198,21 +177,21 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
           age: 65,
           years: 0,
           increase: 0,
-          deferred: forDeferral || !!this.oasDeferDuration,
-          length: this.oasDeferDuration,
-          residency: this.yearsInCanadaSince18,
+          deferred: !!this.client.oasDeferDuration,
+          length: this.client.oasDeferDuration,
+          residency: this.client.yearsInCanadaSince18,
         },
         type: EntitlementResultType.NONE,
         autoEnrollment,
       }
 
     // Monthly clawback amount
-    const monthlyClawbackAmount = roundToTwo(this.clawbackAmount(forPartner) / 12)
+    const monthlyClawbackAmount = roundToTwo(this.clawbackAmount() / 12)
 
     // monthly entitlement amount minus monthly clawback amount
     // const resultCurrent = this.currentEntitlementAmount - monthlyClawbackAmount  //Task 114098 original code
     // task 114098 do not substract the amount from the benefit amount
-    const resultCurrent = this.currentEntitlementAmount(forPartner) //remove this line when a correct recovery process is in place.
+    const resultCurrent = this.currentEntitlementAmount //remove this line when a correct recovery process is in place.
 
     if (resultCurrent <= 0) {
       return {
@@ -224,9 +203,9 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
           age: this.deferralYears + 65,
           years: this.deferralYears,
           increase: 0,
-          deferred: forDeferral || !!this.oasDeferDuration,
-          length: this.oasDeferDuration,
-          residency: this.yearsInCanadaSince18,
+          deferred: !!this.client.oasDeferDuration,
+          length: this.client.oasDeferDuration,
+          residency: this.client.yearsInCanadaSince18,
         },
         type: EntitlementResultType.NONE,
         autoEnrollment,
@@ -236,7 +215,7 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
     const result65To74 = this.age65to74Amount
     const resultAt75 = this.age75EntitlementAmount
     const type =
-      this.yearsInCanadaSince18 < 40
+      this.client.yearsInCanadaSince18 < 40
         ? EntitlementResultType.PARTIAL
         : EntitlementResultType.FULL
 
@@ -254,9 +233,9 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
         age: this.deferralYears + 65,
         years: this.deferralYears,
         increase: this.deferralIncrease,
-        deferred: forDeferral || !!this.oasDeferDuration,
-        length: this.oasDeferDuration,
-        residency: this.yearsInCanadaSince18,
+        deferred: !!this.client.oasDeferDuration,
+        length: this.client.oasDeferDuration,
+        residency: this.client.yearsInCanadaSince18,
       },
       type,
       autoEnrollment,
@@ -268,7 +247,7 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
    */
   get baseAmount() {
     return (
-      Math.min(this.yearsInCanadaSince18 / 40, 1) * legalValues.oas.amount
+      Math.min(this.client.yearsInCanadaSince18 / 40, 1) * legalValues.oas.amount
     )
   }
 
@@ -278,7 +257,7 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
   get deferralYears(): number {
     let oasAge = 65
 
-    const durationStr = this.oasDeferDuration
+    const durationStr = this.client.oasDeferDuration
 
     if (durationStr) {
       const duration: MonthsYears = JSON.parse(durationStr)
@@ -293,7 +272,9 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
    * The dollar amount by which the OAS entitlement will increase due to deferral.
    */
   get deferralIncrease() {
-    return getDeferralIncrease(this.deferralYears * 12, this.baseAmount)
+    const deferralIncreaseByMonth = 0.006 // the increase to the monthly payment per month deferred
+    // the extra entitlement received because of the deferral
+    return roundToTwo(this.deferralYears * 12 * deferralIncreaseByMonth * this.baseAmount)
   }
 
   /**
@@ -311,8 +292,7 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
    * The base OAS amount from 65 to 74 used for GIS calculations.
    */
   get age65to74Amount(): number {
-    const baseAmount = this.baseAmount // the base amount before deferral calculations
-    return baseAmount
+    return this.baseAmount // the base amount before deferral calculations
   }
 
   /**
@@ -328,30 +308,171 @@ export class OasBenefit extends BaseBenefit<EntitlementResultOas> implements Oas
   /**
    * The expected OAS amount, taking into account the client's age.
    * At age 75, OAS increases by 10%.
+   * 
+   * @param age The age of the client
+   * @returns The expected OAS amount
    */
-  currentEntitlementAmount(forPartner: boolean = true, atAge?: number): number {
-    const condition = forPartner
-      ? this.age < 75
-      : this.age < 75 && (atAge !== undefined && atAge < 75)
-    if (condition) return this.age65EntitlementAmount
-    else return this.age75EntitlementAmount
+  private entitlementAmount(age: number): number {
+    return age < 75
+      ? this.age65EntitlementAmount
+      : this.age75EntitlementAmount
+  }
+
+  /**
+   * The expected OAS amount, taking into account the client's age.
+   * At age 75, OAS increases by 10%.
+   * 
+   * @returns The OAS amount the individual is entitled to based on current age
+   */
+  get currentEntitlementAmount(): number {
+    return this.entitlementAmount(this.client.age)
   }
 
   /**
    * The yearly amount of "clawback" aka "repayment tax" the client will have to repay.
    */
-  clawbackAmount(forPartner: boolean = false): number {
+  clawbackAmount(): number {
     const OAS_RT_RATE = 0.15
 
-    const income = this.getIncome(forPartner)
-    if (income || income < legalValues.oas.clawbackIncomeLimit)
+    if (this.client.clientIncome === undefined || this.client.clientIncome < legalValues.oas.clawbackIncomeLimit)
       return 0
 
-    const incomeOverCutoff = income - legalValues.oas.clawbackIncomeLimit
+    const incomeOverCutoff = this.client.clientIncome - legalValues.oas.clawbackIncomeLimit
     const repaymentAmount = incomeOverCutoff * OAS_RT_RATE
-    const oasYearly = this.currentEntitlementAmount(forPartner) * 12
+    const oasYearly = this.currentEntitlementAmount * 12
     const result = Math.min(oasYearly, repaymentAmount)
     return roundToTwo(result)
+  }
+
+  static yearsUntilOAS(age: number, residency: number) {
+    if (age >= 65 && residency >= 10) {
+      return null
+    }
+
+    let ageDiff = Math.max(0, 65 - age)
+    let residencyDiff = Math.max(0, 10 - residency)
+    return Math.max(ageDiff, residencyDiff)
+  }
+
+  static OasEligibility(
+    ageAtStart: number,
+    yearsInCanadaAtStart: number,
+    livedOnlyInCanada = false,
+    livingCountry = 'CAN'
+  ) {
+    let age = ageAtStart
+    let yearsInCanada = yearsInCanadaAtStart
+    const minAgeEligibility = 65
+    const minYearsOfResEligibility = livingCountry === 'CAN' ? 10 : 20
+
+    let ageOfEligibility
+    let yearsOfResAtEligibility
+
+    if (age >= minAgeEligibility && yearsInCanada >= minYearsOfResEligibility) {
+      const yearsPastEligibility = Math.min(
+        age - minAgeEligibility,
+        yearsInCanada - minYearsOfResEligibility
+      )
+      ageOfEligibility = age - yearsPastEligibility
+      yearsOfResAtEligibility = yearsInCanada - yearsPastEligibility
+    } else if (
+      age < minAgeEligibility ||
+      yearsInCanada < minYearsOfResEligibility
+    ) {
+      while (
+        age < minAgeEligibility ||
+        yearsInCanada < minYearsOfResEligibility
+      ) {
+        age++
+        yearsInCanada++
+      }
+      ageOfEligibility = Math.floor(age)
+      yearsOfResAtEligibility =
+        livingCountry == 'CAN'
+          ? Math.round(ageOfEligibility - ageAtStart + yearsInCanadaAtStart)
+          : yearsInCanadaAtStart
+    }
+    return {
+      ageOfEligibility,
+      yearsOfResAtEligibility: livedOnlyInCanada
+        ? 40
+        : Math.floor(yearsOfResAtEligibility || 0), // MCR Defalt to zero if undefined
+    }
+  }
+
+  static evaluateOASInput(input: OasInput & { livedOnlyInCanada: boolean, receiveOAS: boolean }) {
+    let canDefer = false
+    let justBecameEligible = false
+    const age = input.age // 66.42
+    const ageJuly2013 = AgeHelper.calculate2013Age(age, input.birthDate)
+    const yearsInCanada = input.yearsInCanadaSince18
+    let eliObj = OasBenefit.OasEligibility(
+      age,
+      yearsInCanada,
+      input.livedOnlyInCanada,
+      input.livingCountry
+    )
+
+    let newInput: { [key: string]: any } = { ...input }
+
+    let deferralMonths
+    if (
+      eliObj.ageOfEligibility === undefined ||  // MCR Added undefined check
+      ageJuly2013 >= 70 ||
+      eliObj.ageOfEligibility >= 70 ||
+      age < eliObj.ageOfEligibility
+    ) {
+      deferralMonths = 0
+    } else {
+      // Eligibility age is between 65-70 here
+      if (ageJuly2013 >= eliObj.ageOfEligibility) {
+        // Cannot defer from the time they became eligible but only from July 2013 (must use residency and age from July 2013 to calculate OAS with deferral)
+        const ageDiff = ageJuly2013 - eliObj.ageOfEligibility
+        const newRes = Math.floor(eliObj.yearsOfResAtEligibility + ageDiff)
+        eliObj = {
+          ageOfEligibility: ageJuly2013,
+          yearsOfResAtEligibility: newRes,
+        }
+        deferralMonths = (70 - ageJuly2013) * 12
+      } else {
+        // They became eligible after July 2013 -> use age and residency as is (at the time they became eligible for OAS)
+        deferralMonths = (Math.min(70, age) - eliObj.ageOfEligibility) * 12
+      }
+    }
+
+    if (age === eliObj.ageOfEligibility && age < 70) {
+      justBecameEligible = true
+    }
+
+    if (age === eliObj.ageOfEligibility && age < 70) {
+      justBecameEligible = true
+    }
+
+    if (deferralMonths !== 0 && !input.receiveOAS) {
+      canDefer = true
+      newInput['inputAge'] = input.age
+      newInput['age'] = eliObj.ageOfEligibility
+      newInput['receiveOAS'] = true
+      newInput['yearsInCanadaSince18'] = input.livedOnlyInCanada
+        ? 40
+        : Math.min(40, Math.floor(eliObj.yearsOfResAtEligibility))
+      newInput['oasDeferDuration'] = JSON.stringify({
+        months: Math.max(Math.round(deferralMonths), 0),
+        years: 0,
+      })
+      console.log(  // MCR
+        '#5 oasDefer',
+        newInput['oasDeferDuration'],
+        'months',
+        deferralMonths
+      )
+    }
+
+    return {
+      canDefer,
+      newInput,
+      justBecameEligible,
+    }
   }
 
 }

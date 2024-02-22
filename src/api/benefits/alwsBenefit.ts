@@ -2,9 +2,7 @@ import { Translations } from '../i18n'
 import {
   BenefitKey,
   EntitlementResultType,
-  LegalStatus,
   MaritalStatus,
-  PartnerBenefitStatus,
   ResultKey,
   ResultReason,
 } from '../definitions/enums'
@@ -14,33 +12,21 @@ import {
 } from '../definitions/types'
 import legalValues from '../../scrapers/output'
 import { BaseBenefit } from './_base'
-import { EntitlementFormula } from './entitlementFormula'
 import { AlwsInput } from '../definitions/input'
+import { AlwsClient } from '../clients/alwsClient'
+import { GisBase } from './_gisBase'
 
-export class AlwsBenefit extends BaseBenefit<EntitlementResultGeneric> implements AlwsInput {
-
-  public everLivedSocialCountry: boolean
-  public yearsInCanadaSince18: number
-  public livedOnlyInCanada: boolean
-
-  public override maritalStatus: MaritalStatus
-  public override legalStatus: LegalStatus
-  public override partnerBenefitStatus: PartnerBenefitStatus
+export class AlwsBenefit extends GisBase<AlwsClient, EntitlementResultGeneric> {
+  protected benefitKey = BenefitKey.alws
 
   constructor(
     input: AlwsInput,
     translations: Translations
   ) {
-    super(input, translations, BenefitKey.alws)
-    this.everLivedSocialCountry = input.everLivedSocialCountry;
-    this.yearsInCanadaSince18 = input.yearsInCanadaSince18;
-    this.livedOnlyInCanada = input.livedOnlyInCanada;
-    this.maritalStatus = input.maritalStatus;
-    this.legalStatus = input.legalStatus;
-    this.partnerBenefitStatus = input.partnerBenefitStatus;
+    super(new AlwsClient(input), translations)
   }
 
-  protected getEligibility(asOf?: Date, forPartner: boolean = false): EligibilityResult {
+  protected getEligibility(asOf?: Date): EligibilityResult {
 
     // Default to current date
     const now = new Date();
@@ -49,23 +35,23 @@ export class AlwsBenefit extends BaseBenefit<EntitlementResultGeneric> implement
 
     // helpers
     const meetsReqMarital =
-      this._maritalStatus.value == MaritalStatus.WIDOWED
-    const meetsReqAge = 60 <= this.age && this.age < 65
-    const overAgeReq = 65 <= this.age
-    const underAgeReq = this.age < 60
+      this.client.maritalStatus == MaritalStatus.WIDOWED
+    const meetsReqAge = 60 <= this.client.age && this.client.age < 65
+    const overAgeReq = 65 <= this.client.age
+    const underAgeReq = this.client.age < 60
 
     // if income is not provided, assume they meet the income requirement
-    const skipReqIncome = !this._income.provided
+    const skipReqIncome = this.client.clientIncome === undefined
     const maxIncome = legalValues.alw.afsIncomeLimit
     const meetsReqIncome =
-      skipReqIncome || this._income.adjustedRelevant < maxIncome
+      skipReqIncome || this.client.adjustedRelevantIncome < maxIncome
 
     const requiredYearsInCanada = 10
     const meetsReqYears =
-      this.yearsInCanadaSince18 >= requiredYearsInCanada
-    const meetsReqLegal = this._legalStatus.canadian
-    const livingCanada = this._livingCountry.canada
-    const liveOnlyInCanadaMoreThanHalfYear = this.livedOnlyInCanada
+      this.client.yearsInCanadaSince18 >= requiredYearsInCanada
+    const meetsReqLegal = this.client.hasLegalStatusCanada
+    const livingCanada = this.client.isLivingInCanada
+    const liveOnlyInCanadaMoreThanHalfYear = this.client.livedOnlyInCanada
 
     // main checks
     // if not windowed
@@ -132,7 +118,7 @@ export class AlwsBenefit extends BaseBenefit<EntitlementResultGeneric> implement
         incomeMustBeLessThan: maxIncome,
       }
     } else {
-      const amount = this.formulaResult()
+      const amount = this.getGisEntitlementAmount()
       if (amount === 0) {
         return {
           result: ResultKey.ELIGIBLE,
@@ -168,7 +154,7 @@ export class AlwsBenefit extends BaseBenefit<EntitlementResultGeneric> implement
 
     // income is not provided, and they are eligible depending on income? entitlement unavailable.
     if (
-      !this._income.provided &&
+      !this.client.clientIncome !== undefined &&
       this.eligibility.result === ResultKey.INCOME_DEPENDENT
     )
       return {
@@ -181,22 +167,40 @@ export class AlwsBenefit extends BaseBenefit<EntitlementResultGeneric> implement
 
     const type = EntitlementResultType.FULL
 
-    return { result: this.formulaResult(), type, autoEnrollment }
+    return { result: this.getGisEntitlementAmount(), type, autoEnrollment }
   }
 
-  protected formulaResult(): number {
-    return new EntitlementFormula(
-      this._income.adjustedRelevant,
-      this._maritalStatus,
-      this._partnerBenefitStatus,
-      this.age
-    ).getEntitlementAmount()
-  }
   /**
    * For this benefit, always return false, because we don't know any better as of now.
    */
   protected override getAutoEnrollment(): boolean {
     return false
+  }
+
+  static AlwsEligibility(age: number, yearsInCanada: number) {
+    const minAgeEligibility = 60
+    const maxAgeEligibility = 64
+    const minYearsOfResEligibility = 10
+
+    let ageOfEligibility
+    let yearsOfResAtEligibility
+
+    if (age < minAgeEligibility || yearsInCanada < minYearsOfResEligibility) {
+      while (
+        age < minAgeEligibility ||
+        yearsInCanada < minYearsOfResEligibility
+      ) {
+        age++
+        yearsInCanada++
+      }
+      ageOfEligibility = age > maxAgeEligibility ? null : age
+      yearsOfResAtEligibility = yearsInCanada
+    }
+
+    return {
+      ageOfEligibility,
+      yearsOfResAtEligibility,
+    }
   }
 
 }
