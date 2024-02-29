@@ -1,6 +1,5 @@
 import {
   BenefitKey,
-  FieldCategory,
   Language,
   ResultKey,
   SummaryState,
@@ -14,13 +13,6 @@ const en: Translations = {
     [BenefitKey.gis]: 'Guaranteed Income Supplement',
     [BenefitKey.alw]: 'Allowance',
     [BenefitKey.alws]: 'Allowance for the Survivor',
-  },
-  category: {
-    [FieldCategory.AGE]: 'Age',
-    [FieldCategory.INCOME]: 'Income',
-    [FieldCategory.LEGAL]: 'Legal status',
-    [FieldCategory.RESIDENCE]: 'Residence history',
-    [FieldCategory.MARITAL]: 'Marital status',
   },
   result: {
     [ResultKey.ELIGIBLE]: 'Eligible',

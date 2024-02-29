@@ -5,14 +5,6 @@ export enum BenefitKey {
   alws = 'alws',
 }
 
-export enum FieldCategory {
-  AGE = 'age',
-  INCOME = 'income',
-  LEGAL = 'legal',
-  RESIDENCE = 'residence',
-  MARITAL = 'marital',
-}
-
 export enum MaritalStatus {
   SINGLE = 'single',
   PARTNERED = 'partnered',
@@ -37,6 +29,10 @@ export enum PartnerBenefitStatus {
   ALW = 'alw',
   NONE = 'none',
   HELP_ME = 'helpMe',
+}
+
+export function isPartnerBenefitStatus(x: any): x is PartnerBenefitStatus {
+  return Object.values(PartnerBenefitStatus).includes(x);
 }
 
 export enum LivingCountry {
@@ -156,15 +152,4 @@ export enum ValidationErrors {
 export enum Language {
   EN = 'en',
   FR = 'fr',
-}
-
-// must be one of: https://www.techonthenet.com/js/language_tags.php
-export enum LanguageCode {
-  EN = 'en-CA',
-  FR = 'fr-CA',
-}
-
-export enum ISOLanguage {
-  EN = 'eng',
-  FR = 'fra',
 }

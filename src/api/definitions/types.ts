@@ -1,3 +1,7 @@
+import { AlwInput } from '../client/alwClient'
+import { AlwsInput } from '../client/alwsClient'
+import { GisInput } from '../client/gisClient'
+import { OasInput } from '../client/oasClient'
 import {
   BenefitKey,
   EntitlementResultType,
@@ -6,6 +10,8 @@ import {
   ResultReason,
   SummaryState,
 } from './enums'
+
+export type BenefitInput = OasInput | GisInput | AlwInput | AlwsInput
 
 export interface EligibilityResult {
   result: ResultKey

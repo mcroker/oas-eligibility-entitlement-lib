@@ -1,10 +1,12 @@
-import { LegalStatus, MaritalStatus, PartnerBenefitStatus } from '../definitions/enums'
-import { AlwInput } from '../definitions/input'
-import { BaseClient } from './_client'
-import { GisClient } from './gisClient'
+import { GisClientClient, GisInputClient } from './gisClientClient'
 
+export interface AlwsInputClient extends GisInputClient {
+  yearsInCanadaSince18: number
+  everLivedSocialCountry: boolean
+  livedOnlyInCanada: boolean
+}
 
-export class AlwClient extends GisClient implements AlwInput {
+export class AlwsClientClient extends GisClientClient implements AlwsInputClient {
 
   /* yearsInCanadaSince18 */
   override set yearsInCanadaSince18(value: number) {
@@ -24,17 +26,17 @@ export class AlwClient extends GisClient implements AlwInput {
     return super.everLivedSocialCountry
   }
 
-  /* partnerLivingCountry */
-  override set partnerLivingCountry(value: string) {
-    super.partnerLivingCountry = value
+  /* livedOnlyInCanada */
+  override set livedOnlyInCanada(value: boolean) {
+    super.livedOnlyInCanada = value
   }
-  override get partnerLivingCountry(): string {
-    if (super.partnerLivingCountry === undefined) throw new Error('partnerLivingCountry is not defined')
-    return super.partnerLivingCountry
+  override get livedOnlyInCanada(): boolean {
+    if (super.livedOnlyInCanada === undefined) throw new Error('livedOnlyInCanada is not defined')
+    return super.livedOnlyInCanada
   }
 
   constructor(
-    input: AlwInput
+    input: AlwsInputClient
   ) {
     super(input)
   }

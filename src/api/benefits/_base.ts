@@ -7,14 +7,14 @@ import {
   EligibilityResult,
   EntitlementResult,
 } from '../definitions/types'
-import { BaseClient } from '../clients/_client'
+import { ClientAndPartner } from '../client/_clientAndPartner'
 
-export abstract class BaseBenefit<C extends BaseClient, R extends EntitlementResult> {
+export abstract class BaseBenefit<C extends ClientAndPartner = ClientAndPartner, R extends EntitlementResult = EntitlementResult> {
 
-  protected abstract benefitKey: BenefitKey
+  protected readonly abstract benefitKey: BenefitKey
 
   protected constructor(
-    protected client: C,
+    protected input: C,
     protected translations: Translations
   ) {
   }
@@ -26,7 +26,7 @@ export abstract class BaseBenefit<C extends BaseClient, R extends EntitlementRes
   get entitlement(): R {
     return this.getEntitlement()
   }
-  
+
 
   protected abstract getEligibility(asOf?: Date): EligibilityResult;
   protected abstract getEntitlement(asOf?: Date): R;
@@ -35,7 +35,7 @@ export abstract class BaseBenefit<C extends BaseClient, R extends EntitlementRes
    * Just say auto-enroll is true if eligible, because we don't know any better right now.
    * This is overridden by ALW+AFS.
    */
-  protected getAutoEnrollment(): boolean {
+  getAutoEnrollment(): boolean {
     return this.eligibility.result === ResultKey.ELIGIBLE
   }
 

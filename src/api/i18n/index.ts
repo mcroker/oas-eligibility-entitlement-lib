@@ -1,8 +1,6 @@
 import {
   BenefitKey,
-  FieldCategory,
   Language,
-  LanguageCode,
   ResultKey,
   SummaryState,
 } from '../definitions/enums'
@@ -25,7 +23,6 @@ export interface TypedKeyAndText<T> {
 export interface Translations {
   _language: Language
   benefit: { [key in BenefitKey]: string }
-  category: { [key in FieldCategory]: string }
   result: { [key in ResultKey]: string }
   detail: {
     eligible: string
@@ -154,30 +151,4 @@ export function getTranslations(language?: Language): Translations {
     default:
       return apiTranslationsDict.en
   }
-}
-
-/**
- * Reusable utility function that accepts a string, and outputs a locale-formatted currency string.
- * It rounds, it determines where to put the $ sign, it will use spaces or commas, all depending on the locale.
- */
-export function numberToStringCurrency(
-  number: number | undefined,
-  language: Language,
-  options?: { rounding?: number }
-): string {
-  if (number === undefined) {
-    return '';
-  }
-  const languageCode =
-    language === Language.EN ? LanguageCode.EN : LanguageCode.FR
-  const rounding = options?.rounding === undefined ? 2 : options.rounding
-  return number
-    .toLocaleString(languageCode, {
-      style: 'currency',
-      currency: 'CAD',
-      currencyDisplay: 'narrowSymbol',
-      minimumFractionDigits: rounding,
-    })
-    .replace('.00', '')
-    .replace(/,00\s/, '\xa0')
 }

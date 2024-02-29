@@ -7,26 +7,28 @@ import {
   ResultReason,
 } from '../definitions/enums'
 import {
+  BenefitResult,
   EligibilityResult,
   EntitlementResultGeneric,
+  EntitlementResultOas,
 } from '../definitions/types'
 import legalValues from '../../scrapers/output'
+import { AlwsClientAndPartner } from '../client/alwsClient'
+import { EntitlementFormula } from './EntiltementFormula'
 import { BaseBenefit } from './_base'
-import { AlwsInput } from '../definitions/input'
-import { AlwsClient } from '../clients/alwsClient'
-import { GisBase } from './_gisBase'
 
-export class AlwsBenefit extends GisBase<AlwsClient, EntitlementResultGeneric> {
+export class AlwsBenefit extends BaseBenefit<AlwsClientAndPartner, EntitlementResultGeneric> {
   protected benefitKey = BenefitKey.alws
 
   constructor(
-    input: AlwsInput,
-    translations: Translations
+    input: AlwsClientAndPartner,
+    translations: Translations,
+    protected oasResult?: BenefitResult<EntitlementResultOas>
   ) {
-    super(new AlwsClient(input), translations)
+    super(input, translations)
   }
 
-  protected getEligibility(asOf?: Date): EligibilityResult {
+  getEligibility(asOf?: Date): EligibilityResult {
 
     // Default to current date
     const now = new Date();
@@ -35,23 +37,23 @@ export class AlwsBenefit extends GisBase<AlwsClient, EntitlementResultGeneric> {
 
     // helpers
     const meetsReqMarital =
-      this.client.maritalStatus == MaritalStatus.WIDOWED
-    const meetsReqAge = 60 <= this.client.age && this.client.age < 65
-    const overAgeReq = 65 <= this.client.age
-    const underAgeReq = this.client.age < 60
+      this.input.client.maritalStatus == MaritalStatus.WIDOWED
+    const meetsReqAge = 60 <= this.input.client.age && this.input.client.age < 65
+    const overAgeReq = 65 <= this.input.client.age
+    const underAgeReq = this.input.client.age < 60
 
     // if income is not provided, assume they meet the income requirement
-    const skipReqIncome = this.client.clientIncome === undefined
+    const skipReqIncome = this.input.client.income === undefined
     const maxIncome = legalValues.alw.afsIncomeLimit
     const meetsReqIncome =
-      skipReqIncome || this.client.adjustedRelevantIncome < maxIncome
+      skipReqIncome || this.input.adjustedRelevantIncome < maxIncome
 
     const requiredYearsInCanada = 10
     const meetsReqYears =
-      this.client.yearsInCanadaSince18 >= requiredYearsInCanada
-    const meetsReqLegal = this.client.hasLegalStatusCanada
-    const livingCanada = this.client.isLivingInCanada
-    const liveOnlyInCanadaMoreThanHalfYear = this.client.livedOnlyInCanada
+      this.input.client.yearsInCanadaSince18 >= requiredYearsInCanada
+    const meetsReqLegal = this.input.client.hasLegalStatusCanada
+    const livingCanada = this.input.client.isLivingInCanada
+    const liveOnlyInCanadaMoreThanHalfYear = this.input.client.livedOnlyInCanada
 
     // main checks
     // if not windowed
@@ -118,7 +120,7 @@ export class AlwsBenefit extends GisBase<AlwsClient, EntitlementResultGeneric> {
         incomeMustBeLessThan: maxIncome,
       }
     } else {
-      const amount = this.getGisEntitlementAmount()
+      const amount = this.getEntitlementAmount()
       if (amount === 0) {
         return {
           result: ResultKey.ELIGIBLE,
@@ -139,7 +141,7 @@ export class AlwsBenefit extends GisBase<AlwsClient, EntitlementResultGeneric> {
     }
   }
 
-  protected getEntitlement(): EntitlementResultGeneric {
+  getEntitlement(): EntitlementResultGeneric {
     const autoEnrollment = this.getAutoEnrollment()
     // client is not eligible, and it's not because income missing? they get nothing.
     if (
@@ -154,7 +156,7 @@ export class AlwsBenefit extends GisBase<AlwsClient, EntitlementResultGeneric> {
 
     // income is not provided, and they are eligible depending on income? entitlement unavailable.
     if (
-      !this.client.clientIncome !== undefined &&
+      !this.input.client.income !== undefined &&
       this.eligibility.result === ResultKey.INCOME_DEPENDENT
     )
       return {
@@ -167,13 +169,18 @@ export class AlwsBenefit extends GisBase<AlwsClient, EntitlementResultGeneric> {
 
     const type = EntitlementResultType.FULL
 
-    return { result: this.getGisEntitlementAmount(), type, autoEnrollment }
+    return { result: this.getEntitlementAmount(), type, autoEnrollment }
+  }
+
+  getEntitlementAmount(): number {
+    // TODO This is almost certainly the wrong use of inputAge parameter, but I don't know what it should be.
+    return new EntitlementFormula(this.input, this.oasResult).getEntitlementAmount()
   }
 
   /**
    * For this benefit, always return false, because we don't know any better as of now.
    */
-  protected override getAutoEnrollment(): boolean {
+  override getAutoEnrollment(): boolean {
     return false
   }
 

@@ -76,23 +76,7 @@ export namespace PartnerBenefitStatusHelper {
 
 /*
 
-  // when we calculate results for the partner, the below functions will be used to store the results
 
-  set oasResultEntitlement(value: EntitlementResult) {
-  this.oasEligibility = value.type
-}
-  set gisResultEligibility(value: EligibilityResult) {
-  this.gisEligibility =
-    value.result === ResultKey.ELIGIBLE
-      ? EntitlementResultType.FULL
-      : EntitlementResultType.NONE
-}
-  set alwResultEligibility(value: EligibilityResult) {
-  this.alwEligibility =
-    value.result === ResultKey.ELIGIBLE
-      ? EntitlementResultType.FULL
-      : EntitlementResultType.NONE
-}
 }
 
 */

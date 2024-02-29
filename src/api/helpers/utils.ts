@@ -61,3 +61,7 @@ function addKeyValue(obj: { [key: string | number]: any }, key: string | number,
   }
 }
 
+
+export const consoleDev = (...messages: any) => {
+  if (process.env.APP_ENV !== 'production') console.log(...messages)
+}

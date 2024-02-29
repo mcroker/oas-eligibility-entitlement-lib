@@ -2,11 +2,7 @@
 
 import {
   BenefitKey,
-  FieldCategory,
   Language,
-  LegalStatus,
-  MaritalStatus,
-  PartnerBenefitStatus,
   ResultKey,
   SummaryState,
 } from '../definitions/enums'
@@ -20,13 +16,6 @@ const fr: Translations = {
     [BenefitKey.gis]: 'Supplément de revenu garanti',
     [BenefitKey.alw]: 'Allocation',
     [BenefitKey.alws]: 'Allocation au survivant',
-  },
-  category: {
-    [FieldCategory.AGE]: 'Âge',
-    [FieldCategory.INCOME]: 'Revenu',
-    [FieldCategory.LEGAL]: 'Statut légal',
-    [FieldCategory.RESIDENCE]: 'Historique de résidence',
-    [FieldCategory.MARITAL]: 'État matrimonial',
   },
   result: {
     [ResultKey.ELIGIBLE]: 'Admissible',
